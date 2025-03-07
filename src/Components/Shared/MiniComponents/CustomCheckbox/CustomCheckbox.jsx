@@ -20,13 +20,7 @@ const CustomCheckbox = ({ inputData: { name, isRequired = false, id } }) => {
     setSaveBillingInfo(!saveBillingInfoToLocal);
   }
 
-  function setSaveBillingInfo(value) {
-    const updateAction = updateProductsState({
-      key: "saveBillingInfoToLocal",
-      value: value,
-    });
-    dispatch(updateAction);
-  }
+ 
 
   return (
     <div className={s.checkboxContainer}>

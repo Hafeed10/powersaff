@@ -23,13 +23,13 @@ const PaymentProducts = ({ products }) => {
             </span>
           </div>
 
-          <span className={s.price}>${afterDiscount}</span>
+          <span className={s.price}>₹{afterDiscount}</span>
         </Link>
       ))}
 
-      {!hasProducts && (
+      {/* {!hasProducts && (
         <p className={s.hasNoProducts}>{t("checkoutPage.hasNoProducts")}</p>
-      )}
+      )} */}
     </div>
   );
 };

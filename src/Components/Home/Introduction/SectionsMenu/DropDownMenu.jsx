@@ -25,19 +25,7 @@ const DropDownMenu = ({ nameMenu, children }) => {
     setIsMenuOpen(true);
   }
 
-  return (
-    <div {...dropDownMenuAttributes}>
-      <div className={s.nameMenu}>
-        {/* <span>{nameMenu}</span> */}
-
-        {/* <button type="button" className={activeClass} aria-label={ariaLabel}>
-          <SvgIcon name="chevronRight" />
-        </button> */}
-      </div>
-
-      <div className={`${s.menu} ${activeClass}`}>{children}</div>
-    </div>
-  );
+  
 };
 
 export default DropDownMenu;

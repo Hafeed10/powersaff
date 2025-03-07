@@ -34,7 +34,7 @@ const ProductFirstInfos = ({ productData }) => {
       </div>
 
       <span className={s.price} aria-label={`Price: $${price}`}>
-        ${price}
+        ₹{price}
       </span>
 
       <p className={s.description}>{translatedDescription}</p>

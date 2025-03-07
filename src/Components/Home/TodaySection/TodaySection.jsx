@@ -17,7 +17,7 @@ const TodaySection = () => {
           eventName={t(`${todaysSection}.title`)}
           sectionName={t(`${todaysSection}.flashSales`)}
         />
-        <EventCounter eventName="flash-sales" timeEvent="3 23 19 56" />
+        <EventCounter eventName="flash-sales" timeEvent="0 0 0 0" />
       </div>
 
       <ProductsSlider filterFun={filterFlashSalesProducts} loading="lazy" />

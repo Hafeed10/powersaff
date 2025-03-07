@@ -20,7 +20,7 @@ const CartInfoMenu = () => {
       <div className={s.content}>
         <div className={s.item}>
           <span>{t(`${cartInfo}.subTotal`)}:</span>
-          <span aria-label={`Subtotal ${subTotal}`}>${subTotal}</span>
+          <span aria-label={`Subtotal ${subTotal}`}>₹{subTotal}</span>
         </div>
 
         <div className={s.item}>
@@ -32,7 +32,7 @@ const CartInfoMenu = () => {
 
         <div className={s.item}>
           <span>{t(`${cartInfo}.total`)}:</span>
-          <span aria-label={`Total ${subTotal}`}>${subTotal}</span>
+          <span aria-label={`Total ${subTotal}`}>₹{subTotal}</span>
         </div>
       </div>
 
