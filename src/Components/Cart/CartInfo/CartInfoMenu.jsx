@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { showAlert } from "src/Features/alertsSlice";
 import { getSubTotal } from "src/Functions/helper";
 import s from "./CartInfoMenu.module.scss";
 
@@ -25,9 +24,7 @@ const CartInfoMenu = () => {
 
         <div className={s.item}>
           <span>{t(`${cartInfo}.shipping`)}:</span>
-          <span aria-label={t(`${cartInfo}.free`)}>
-            {t(`${cartInfo}.free`)}
-          </span>
+          <span aria-label={t(`${cartInfo}.free`)}>{t(`${cartInfo}.free`)}</span>
         </div>
 
         <div className={s.item}>
@@ -38,24 +35,44 @@ const CartInfoMenu = () => {
 
       <button
         type="button"
-        onClick={() => handleCheckoutBtn(cartProducts, navigateTo, dispatch, t)}
+        className={s.whatsappButton}
+        onClick={() => handleWhatsAppShare(cartProducts, t)}
       >
-        {t("buttons.processToCheckout")}
+        {t("Share On Company WhatsApp")}
       </button>
     </div>
   );
 };
+
 export default CartInfoMenu;
 
-function handleCheckoutBtn(cartProducts, navigateTo, dispatch, t) {
-  const isThereAnyCartItem = cartProducts.length > 0;
+// Handle WhatsApp Share Button Click
+function handleWhatsAppShare(cartProducts, t) {
+  if (cartProducts.length === 0) {
+    alert(t("toastAlert.cartEmpty"));
+    return;
+  }
 
-  if (isThereAnyCartItem) navigateTo("/checkout");
-  else showEmptyCartAlert(dispatch, t);
-}
+  let message = `🛒 *${t("cartPage.cartInfoMenu.cartTotal")}*\n\n`;
 
-function showEmptyCartAlert(dispatch, t) {
-  const alertText = t("toastAlert.cartEmpty");
-  const alertState = "warning";
-  dispatch(showAlert({ alertText, alertState, alertType: "alert" }));
+  cartProducts.forEach((product, index) => {
+    message += `${index + 1}. *${product.name}*\n`;
+    message += `   - 💰 Price: ₹${product.price}\n`;
+    message += `   - 🔢 Quantity: ${product.quantity}\n`;
+    message += `   - 🏷️ Total: ₹${product.price * product.quantity}\n`;
+
+    // Add product image URL if available
+    if (product.imageUrl) {
+      message += `   - 🖼️ Image: ${product.imageUrl}\n`;
+    }
+
+    message += `\n`;
+  });
+
+  message += `🔹 *${t("cartPage.cartInfoMenu.total")}:* ₹${getSubTotal(cartProducts)}`;
+
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+
+  window.open(whatsappUrl, "_blank");
 }

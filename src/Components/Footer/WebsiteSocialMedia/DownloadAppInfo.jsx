@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { appStore, googlePlay, qrCode } from "src/Assets/Images/Images";
+import { appStore, googlePlay} from "src/Assets/Images/Images";
 import { mySocialMedia } from "src/Data/staticData";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./DownloadAppInfo.module.scss";
+import  qrCode from '../../../Assets/Images/qr-code.png';
 
 const DownloadAppInfo = () => {
   const { t } = useTranslation();
