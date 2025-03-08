@@ -5,8 +5,13 @@ import s from "./CartProduct.module.scss";
 import RemoveCartProductBtn from "./RemoveCartProductBtn";
 
 const CartProduct = ({ data }) => {
-  const { img, name, shortName, afterDiscount, quantity, id } = data;
-  const priceAfterDiscount = afterDiscount.replaceAll(",", "");
+  if (!data) {
+    console.error("⚠️ CartProduct received undefined data!");
+    return null;
+  }
+
+  const { img, name, shortName, afterDiscount, quantity, id, description } = data;
+  const priceAfterDiscount = parseFloat(afterDiscount.replaceAll(",", "")) || 0;
   const subTotal = (quantity * priceAfterDiscount).toFixed(2);
   const { t } = useTranslation();
 
@@ -25,6 +30,7 @@ const CartProduct = ({ data }) => {
         </div>
 
         <Link to={`/details?product=${name}`}>{translatedProductName}</Link>
+        <p className={s.description}>{truncateText(description, 100)}</p> {/* Truncate long descriptions */}
       </td>
 
       <td className={s.price}>₹{afterDiscount}</td>
@@ -37,8 +43,12 @@ const CartProduct = ({ data }) => {
     </tr>
   );
 };
+
 export default CartProduct;
 
+/**
+ * Translates a product name based on its key.
+ */
 export function translateProduct({
   productName,
   translateMethod,
@@ -46,11 +56,30 @@ export function translateProduct({
   uppercase = false,
   dynamicData = {},
 }) {
-  const shortNameKey = productName?.replaceAll(" ", "");
-  const productTrans = `products.${shortNameKey}`;
-  const translateText = translateMethod(
-    `${productTrans}.${translateKey}`,
-    dynamicData
-  );
+  if (!productName) {
+    console.warn("⚠️ Missing product name for translation!");
+    return "Unnamed Product";
+  }
+
+  const shortNameKey = productName.replace(/\s+/g, "").toLowerCase();
+  const productTrans = `products.${shortNameKey}.${translateKey}`;
+
+  console.log(`🔹 Translating "${productName}" with key: ${productTrans}`);
+
+  const translateText = translateMethod(productTrans, dynamicData);
+
+  if (!translateText || translateText === productTrans) {
+    console.warn(`⚠️ No translation found for key: ${productTrans}`);
+    return productName;
+  }
+
   return uppercase ? translateText.toUpperCase() : translateText;
+}
+
+/**
+ * Truncates text to prevent long descriptions from breaking UI.
+ */
+function truncateText(text, maxLength) {
+  if (!text) return "";
+  return text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
 }

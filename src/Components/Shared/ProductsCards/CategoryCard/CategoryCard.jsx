@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
-import { camelCase } from "src/Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./CategoryCard.module.scss";
 
@@ -9,7 +8,12 @@ const CategoryCard = ({ categoryData }) => {
   const categoryType = title.toLowerCase();
   const navigateTo = useNavigate();
   const { t } = useTranslation();
-  const categoryTitleTrans = t(`categoriesData.${camelCase(title)}`);
+
+  // Use lowercase key directly for translation
+  const categoryTitleTrans = t(`categoriesData.${categoryType}`, title);
+
+  console.log("Translation Key:", `categoriesData.${categoryType}`);
+  console.log("Translated Title:", categoryTitleTrans);
 
   function navigateToCategory() {
     navigateTo(`/category?type=${categoryType}`);
@@ -26,4 +30,5 @@ const CategoryCard = ({ categoryData }) => {
     </Link>
   );
 };
+
 export default CategoryCard;

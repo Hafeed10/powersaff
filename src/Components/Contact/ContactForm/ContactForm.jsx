@@ -1,79 +1,76 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { showAlert } from "src/Features/alertsSlice";
+import emailjs from "@emailjs/browser";
 import s from "./ContactForm.module.scss";
 
 const ContactForm = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
+  const formRef = useRef();
   const [phone, setPhone] = useState("");
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    resetForm(e, setPhone);
-    showSentMsgAlert(dispatch, t);
-  }
+
+    emailjs
+      .sendForm(
+        "service_e42yfzp", 
+        "template_uhkty3d", 
+        formRef.current, 
+        "j6YahqNZoebTYlmcn"
+      )
+      .then(
+        () => {
+          showSentMsgAlert(dispatch, t);
+          resetForm(e, setPhone);
+        },
+        (error) => {
+          console.error("FAILED...", error.text);
+          dispatch(
+            showAlert({
+              alertText: t("toastAlert.messageFailed"),
+              alertState: "error",
+              alertType: "alert",
+            })
+          );
+        }
+      );
+  };
 
   return (
-    <form className={s.contactForm} onSubmit={handleSubmit}>
+    <form ref={formRef} className={s.contactForm} onSubmit={handleSubmit}>
       <div className={s.inputs}>
         <div className={s.wrapper}>
           <div className={s.input}>
-            <label htmlFor="username" aria-label="Username field placeholder">
-              {t("inputsPlaceholders.yourName")}
-            </label>
-            <input
-              type="text"
-              placeholder=""
-              autoComplete="off"
-              name="username"
-              id="username"
-              required
-              aria-required="true"
-            />
+            <label htmlFor="username">{t("inputsPlaceholders.yourName")}</label>
+            <input type="text" name="user_name" id="username" required  placeholder="" />
           </div>
 
           <div className={s.input}>
-            <label htmlFor="email" aria-label="Email field placeholder">
-              {t("inputsPlaceholders.yourEmail")}
-            </label>
-            <input
-              type="email"
-              placeholder=""
-              autoComplete="off"
-              name="email"
-              id="email"
-              required
-              aria-required="true"
-            />
+            <label htmlFor="email">{t("inputsPlaceholders.yourEmail")}</label>
+            <input type="email" name="user_email" id="email" required  placeholder=""/>
           </div>
 
           <div className={s.input}>
-            <label htmlFor="phone" aria-label="Phone number field placeholder">
-              {t("inputsPlaceholders.yourPhone")}
-            </label>
+            <label htmlFor="phone">{t("inputsPlaceholders.yourPhone")}</label>
             <input
               type="tel"
-              autoComplete="off"
               placeholder=""
-              name="phone"
+              name="user_phone"
               id="phone"
-              required
-              aria-required="true"
-              onChange={(e) => handleMobileOnChange(e, setPhone)}
               value={phone}
+              required
+              onChange={(e) => handleMobileOnChange(e, setPhone)}
             />
           </div>
         </div>
 
         <textarea
           name="message"
-          autoComplete="off"
           placeholder={t("inputsPlaceholders.yourMessage")}
-          aria-label="User message field"
           required
-          aria-required="true"
         />
       </div>
 
@@ -84,26 +81,28 @@ const ContactForm = () => {
     </form>
   );
 };
+
 export default ContactForm;
 
+// Helper Functions
 function resetForm(e, setPhone) {
-  const resetButton = e.target.querySelector("button[type=reset]");
-  resetButton?.click();
+  e.target.reset();
   setPhone("");
 }
 
 function handleMobileOnChange(e, setPhone) {
-  const pressedKey = e.nativeEvent.data;
-  const isNumber = !isNaN(parseInt(pressedKey));
-  if (isNumber || pressedKey === null) setPhone(e.target.value);
+  const isNumber = !isNaN(parseInt(e.nativeEvent.data));
+  if (isNumber || e.nativeEvent.data === null) {
+    setPhone(e.target.value);
+  }
 }
 
 function showSentMsgAlert(dispatch, t) {
-  const action = showAlert({
-    alertText: t("toastAlert.messageSent"),
-    alertState: "success",
-    alertType: "alert",
-  });
-
-  setTimeout(() => dispatch(action), 1200);
+  dispatch(
+    showAlert({
+      alertText: t("toastAlert.messageSent"),
+      alertState: "success",
+      alertType: "alert",
+    })
+  );
 }

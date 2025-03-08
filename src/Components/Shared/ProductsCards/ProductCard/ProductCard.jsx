@@ -64,7 +64,7 @@ const ProductCard = ({
             alt={name}
             aria-label={name}
             loading={loading}
-            onClick={navigateToProductDetails}
+            onClick={navigateToProductDetails} 
           />
         </div>
 

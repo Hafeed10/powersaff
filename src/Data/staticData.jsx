@@ -1,20 +1,14 @@
 import {
   appleLogo,
-  bkashCard,
   canonLogo,
-  mastercard,
-  member1Img,
-  member2Img,
-  member3Img,
-  nagadCard,
   productImg1,
   productImg2,
   productImg3,
   russiaFlag,
   saudiFlag,
   usaFlag,
-  visaCard,
 } from "src/Assets/Images/Images";
+import  member1Img from "src/Assets/Images/photo.png";
 import {
   car,
   correctSign,
@@ -38,7 +32,7 @@ export const introductionSliderData = [
     productName: "Canon EOS 5D MkII",
     productImg: productImg2,
     logoImg: canonLogo,
-    discountText: "Up to 30% off Voucher",
+    discountText: "Up to 20% off Voucher",
     id: 2,
   },
   {
@@ -81,6 +75,16 @@ export const categoriesData = [
     title: "Gaming",
     id: 6,
   },
+  {
+    iconName: "battery",
+    title: "Battery",
+    id: 7,
+  },
+  {
+    iconName: "inverter",
+    title: "Inverter",
+    id: 8,
+  },
 ];
 
 export const aboutCardsInfo = [
@@ -116,68 +120,14 @@ export const aboutCardsInfo = [
 
 export const ourMembersData = [
   {
-    name: "Tom Cruise",
+    name: "Jabbar Ak",
     jobTitle: "Founder & Chairman",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     img: member1Img,
-    socialMedia: {
-      twitter: "https://twitter.com/",
-      instagram: "https://www.instagram.com/",
-      linkedin: "https://www.linkedin.com/",
-    },
     id: 1,
-  },
-
-  {
-    name: "Emma Watson",
-    jobTitle: "Managing Director",
-    img: member2Img,
-    socialMedia: {
-      twitter: "https://twitter.com/",
-      instagram: "https://www.instagram.com/",
-      linkedin: "https://www.linkedin.com/",
-    },
-    id: 2,
-  },
-
-  {
-    name: "Will Smith",
-    jobTitle: "Product Designer",
-    img: member3Img,
-    socialMedia: {
-      twitter: "https://twitter.com/",
-      instagram: "https://www.instagram.com/",
-      linkedin: "https://www.linkedin.com/",
-    },
-    id: 3,
   },
 ];
 
-export const paymentCards = [
-  {
-    img: bkashCard,
-    alt: "Bkash card",
-    link: "https://www.bkash.com/en/products-services/visa-card-to-bkash",
-    id: 1,
-  },
-  {
-    img: visaCard,
-    alt: "Visa card",
-    link: "https://usa.visa.com/pay-with-visa/find-card/apply-credit-card",
-    id: 2,
-  },
-  {
-    img: mastercard,
-    alt: "Mastercard",
-    link: "https://www.mastercard.us/en-us.html",
-    id: 3,
-  },
-  {
-    img: nagadCard,
-    alt: "Nagad card",
-    link: "https://www.nagad.com.bd/services/?service=add-money-from-card",
-    id: 4,
-  },
-];
 
 export const LANGUAGES = [
   {

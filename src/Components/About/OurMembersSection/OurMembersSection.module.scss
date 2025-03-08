@@ -1,51 +1,68 @@
 @use "src/Styles/mixins" as m;
 
 .ourMembersSection {
-  width: 100%;
   display: flex;
-  gap: 40px;
-  margin-bottom: 100px;
-  padding-bottom: 10px;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e9ecef;
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  overflow: hidden;
+.membersContainer{
+  margin-top: -100px;
+  background: #044a42;
+  height: 300px;
+  padding: 10px 20px;
 }
-
-@include m.large {
-  .ourMembersSection {
-    gap: 20px;
-  }
-}
-
-@include m.medium {
-  .ourMembersSection {
-    flex-direction: column;
+  @media (min-width: 768px) { 
+    flex-direction: row; /* Side-by-side on larger screens */
     align-items: center;
-    overflow: visible;
-    gap: 40px;
+    justify-content: space-between;
+    padding: 20px 40px;
+    height: auto;
   }
-}
 
-.ourMembersSection::-webkit-scrollbar {
-  display: none;
-}
-
-// [Member Cards]
-.ourMembersSection>* {
-  min-width: calc((100% / 3 - 40px) + (40px / 3));
-}
-
-@include m.medium {
-  .ourMembersSection>* {
-    width: 360px;
-  }
-}
-
-@media (max-width: 500px) {
-  .ourMembersSection>* {
-    min-width: 100%;
-  }
-}
-
-@include m.very-small {
-  .ourMembersSection>* {
+  .membersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
     width: 100%;
+
+    @media (min-width: 768px) {
+      width: 50%; /* Take up half the width */
+    }
+  }
+
+  .header {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      padding: 0;
+    }
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #044a42;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+    }
   }
 }

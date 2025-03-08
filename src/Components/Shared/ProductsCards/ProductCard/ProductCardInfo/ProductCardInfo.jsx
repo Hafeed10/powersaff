@@ -5,15 +5,38 @@ import ProductColors from "../../../MiniComponents/ProductColors/ProductColors";
 import s from "./ProductCardInfo.module.scss";
 
 const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
-  const { shortName, price, discount, afterDiscount, rate, votes, colors } =
-    product;
+  if (!product) {
+    console.error("Product is undefined!");
+    return null;
+  }
+
+  console.log("Product Object:", product);
+  console.log("Short Name Before Translation:", product?.shortName);
+
+  const {
+    shortName = "Unnamed Product",
+    price = 0,
+    discount = 0,
+    afterDiscount = 0,
+    rate = 0,
+    votes = 0,
+    colors = [],
+  } = product;
+
   const { t } = useTranslation();
 
-  const translatedProductName = translateProduct({
-    productName: shortName,
-    translateMethod: t,
-    translateKey: "shortName",
-  });
+  console.log("Translate Product Function:", typeof translateProduct);
+
+  const translatedProductName =
+    shortName && typeof translateProduct === "function"
+      ? translateProduct({
+          productName: shortName,
+          translateMethod: t,
+          translateKey: "shortName",
+        }) || shortName
+      : shortName;
+
+  console.log("Translated Product Name:", translatedProductName);
 
   return (
     <section className={s.productInfo}>
@@ -24,7 +47,7 @@ const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
       </strong>
 
       <div className={s.price}>
-      ₹{afterDiscount}
+        ₹{afterDiscount}
         {discount > 0 && <del className={s.afterDiscount}>₹{price}</del>}
       </div>
 
@@ -41,4 +64,5 @@ const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
     </section>
   );
 };
+
 export default ProductCardInfo;

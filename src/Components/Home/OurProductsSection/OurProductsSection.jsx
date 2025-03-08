@@ -19,7 +19,7 @@ const OurProductsSection = () => {
       </div>
 
       <ExploreProducts
-        numOfProducts={7}
+        numOfProducts={6}
         customization={productCardCustomizations.ourProducts}
         loading="lazy"
       />

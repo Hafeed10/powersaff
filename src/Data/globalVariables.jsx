@@ -61,9 +61,9 @@ export const regexPatterns = {
 };
 
 export const DEFAULT_LOGIN_DATA = {
-  username: "Jabbar",
-  emailOrPhone: "powersaffpkn@gmail.com",
-  password: "password1234",
+  username: "Name",
+  emailOrPhone: "Email",
+  password: "password123",
   isSignIn: true,
 };
 

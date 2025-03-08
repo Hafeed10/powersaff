@@ -15,13 +15,10 @@ import productImg1 from "./introduction-product1.webp";
 import productImg2 from "./introduction-product2.webp";
 import productImg3 from "./introduction-product3.webp";
 import japanFlag from "./japane-flag.webp";
-import member1Img from "./man.webp";
-import member3Img from "./man2.webp";
 import mastercard from "./mastercard.webp";
 import nagadCard from "./nagad.webp";
 import perfumeGucci from "./perfume-gucci.webp";
 import ps5 from "./ps5.webp";
-import qrCode from "./qr-code.webp";
 import russiaFlag from "./russia-flag.webp";
 import saudiFlag from "./saudi-flag.webp";
 import signUpImg from "./signup-img.webp";
@@ -31,9 +28,7 @@ import uncoloredStar from "./uncolored-star.svg";
 import usaFlag from "./usa-flag.webp";
 import userImg from "./user-image.webp";
 import userPicturePlaceholder from "./user-picture-placeholder.webp";
-import visaCard from "./visa.webp";
 import womanWithHat from "./woman-with-hat.webp";
-import member2Img from "./woman.webp";
 import womenShopping from "./women-shopping.webp";
 
 export {
@@ -52,16 +47,12 @@ export {
   indiaFlag,
   japanFlag,
   mastercard,
-  member1Img,
-  member2Img,
-  member3Img,
   nagadCard,
   perfumeGucci,
   productImg1,
   productImg2,
   productImg3,
   ps5,
-  qrCode,
   russiaFlag,
   saudiFlag,
   signUpImg,
@@ -71,7 +62,6 @@ export {
   usaFlag,
   userImg,
   userPicturePlaceholder,
-  visaCard,
   womanWithHat,
   womenShopping,
 };

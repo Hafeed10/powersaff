@@ -1,3 +1,5 @@
+import { FiBatteryCharging } from "react-icons/fi";
+import { GoInbox } from "react-icons/go";
 export const iconsData = [
   {
     name: "user",
@@ -868,6 +870,18 @@ export const iconsData = [
       </svg>
     ),
   },
+  {
+    name: "Battery",
+    icon: (
+    <FiBatteryCharging />
+  )
+  },
+  {
+    name: "Inverter",
+    icon: (
+    <GoInbox />
+  )// Replace with the correct icon
+  },
 
   {
     name: "codeFork",
@@ -952,3 +966,4 @@ export const iconsData = [
     ),
   },
 ];
+

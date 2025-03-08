@@ -13,7 +13,9 @@ import ProductFirstInfos from "./ProductFirstInfos/ProductFirstInfos";
 import ProductSizes from "./ProductSizes/ProductSizes";
 
 const ProductDetails = ({ productData }) => {
-  if (!productData) return <Navigate to="product-not-found" />;
+  console.log("Product Data in ProductDetails:", productData);
+
+  if (!productData) return <Navigate to="/product-not-found" />;
 
   const { loadingProductDetails } = useSelector((state) => state.loading);
   const { previewImg, isZoomInPreviewActive } = useSelector(
@@ -30,14 +32,16 @@ const ProductDetails = ({ productData }) => {
     const yPosition = e.clientY - imgRect.top;
     const positions = `-${xPosition * 2}px, -${yPosition * 2}px`;
 
-    zoomInImgRef.current.style.transform = `translate(${positions})`;
+    if (zoomInImgRef.current) {
+      zoomInImgRef.current.style.transform = `translate(${positions})`;
+    }
   }
 
   useEffect(() => {
-    dispatch(
-      updateProductsState({ key: "selectedProduct", value: productData })
-    );
-  }, []);
+    if (productData) {
+      dispatch(updateProductsState({ key: "selectedProduct", value: productData }));
+    }
+  }, [productData, dispatch]);
 
   return (
     <>
@@ -71,4 +75,5 @@ const ProductDetails = ({ productData }) => {
     </>
   );
 };
+
 export default ProductDetails;
