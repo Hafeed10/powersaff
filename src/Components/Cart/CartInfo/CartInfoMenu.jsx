@@ -72,7 +72,7 @@ function handleWhatsAppShare(cartProducts, t) {
   message += `🔹 *${t("cartPage.cartInfoMenu.total")}:* ₹${getSubTotal(cartProducts)}`;
 
   const encodedMessage = encodeURIComponent(message);
-  const whatsappUrl = `https://wa.me/7558847558?text=${encodedMessage}`;
+  const whatsappUrl = `https://wa.me/9446180100?text=${encodedMessage}`;
 
   window.open(whatsappUrl, "_blank");
 }

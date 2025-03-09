@@ -26,10 +26,6 @@ const PaymentProducts = ({ products }) => {
           <span className={s.price}>₹{afterDiscount}</span>
         </Link>
       ))}
-
-      {/* {!hasProducts && (
-        <p className={s.hasNoProducts}>{t("checkoutPage.hasNoProducts")}</p>
-      )} */}
     </div>
   );
 };
