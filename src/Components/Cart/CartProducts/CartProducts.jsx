@@ -12,7 +12,7 @@ const CartProducts = () => {
     <table className={s.cartProducts}>
       <thead>
         <tr>
-          <th>{(`${productsTable}.product`)}</th>
+          <th>{t(`${productsTable}.product`)}</th>
           <th>{t(`${productsTable}.price`)}</th>
           <th>{t(`${productsTable}.quantity`)}</th>
           <th>{t(`${productsTable}.subtotal`)}</th>

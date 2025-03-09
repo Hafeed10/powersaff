@@ -59,6 +59,14 @@ const ProductDetails = ({ productData }) => {
 
             <ProductFirstInfos productData={productData} />
 
+            {/* ✅ Product Description Section */}
+            {productData?.description && (
+              <section className={s.productInfo}>
+                <h2>{productData.name}</h2>
+                <p className={s.productDescription}>{productData.description}</p>
+              </section>
+            )}
+
             <div className={s.horizontalLine} />
 
             <ProductColorsSection productData={productData} />

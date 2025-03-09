@@ -68,10 +68,10 @@ const ProductDetailsPage = () => {
         <title>{productNameTrans || "Product Details"}</title>
         <meta
           name="description"
-          content="Explore the details and specifications of your favorite products on Exclusive. Find everything you need to know, from features to customer reviews, before making your purchase."
+          content={PRODUCT_DATA?.description || "Explore the product details."}
         />
       </Helmet>
-
+  
       <div className="container">
         <main className={s.detailsPage}>
           <PagesHistory history={history} historyPaths={historyPaths} />

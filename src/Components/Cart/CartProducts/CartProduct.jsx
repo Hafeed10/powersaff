@@ -10,7 +10,7 @@ const CartProduct = ({ data }) => {
     return null;
   }
 
-  const { img, name, shortName, afterDiscount, quantity, id, description } = data;
+  const { img, name, shortName, afterDiscount, quantity, id} = data;
   const priceAfterDiscount = parseFloat(afterDiscount.replaceAll(",", "")) || 0;
   const subTotal = (quantity * priceAfterDiscount).toFixed(2);
   const { t } = useTranslation();
@@ -28,9 +28,7 @@ const CartProduct = ({ data }) => {
           <img src={img} alt={`${shortName} product`} />
           <RemoveCartProductBtn productId={id} />
         </div>
-
-        <Link to={`/details?product=${name}`}>{translatedProductName}</Link>
-        <p className={s.description}>{truncateText(description, 100)}</p> {/* Truncate long descriptions */}
+         <Link to={`/details?product=${name}`}>{translatedProductName}</Link>
       </td>
 
       <td className={s.price}>₹{afterDiscount}</td>
