@@ -28,9 +28,8 @@ const NavLinksSideBar = () => {
           return (
             <li key={"mobile-nav-link-" + index} role="menuitem">
               <NavLink to={link} aria-current={currentPage}>
-                <SvgIcon name={icon} />
                 <span className={s.text}>
-                  {t(`mobileNav.${camelCase(name)}`)}
+                  {name}
                 </span>
               </NavLink>
             </li>

@@ -1,31 +1,63 @@
 @use "src/Styles/mixins" as m;
 
+.mobileNavContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px; // Space between menu icon & text
+  display: none; // Hide by default
+}
+
+// Mobile Nav Button
 .mobileNav {
   -webkit-tap-highlight-color: transparent;
   background-color: transparent;
   border: none;
   outline: none;
-  display: none;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
+  display: none; 
 
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 
-  &:focus-visible>svg {
+  &:focus-visible > svg {
     fill: var(--orange-degree2);
   }
 }
 
+// Show Mobile Navigation & Customer Service only on small screens
 @include m.small {
+  .mobileNavContainer {
+    display: flex; // Make it visible on mobile
+  }
+
   .mobileNav {
-    display: block;
+    display: block; // Show the menu icon
   }
 }
 
-.mobileNav>svg {
+// Customer Service Section
+.customerService {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.serviceTitle {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.serviceNumber {
+  color: #d32f2f;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+// Mobile Menu Icon Styling
+.mobileNav > svg {
   width: 27px;
   height: 27px;
   cursor: pointer;
-  transition: fill .2s;
+  transition: fill 0.2s;
 }

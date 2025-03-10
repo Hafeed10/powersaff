@@ -6,7 +6,7 @@ const OtherSections = ({ data }) => {
 
   return data.map((item, index) => {
     const itemName = camelCase(item.name);
-    const itemTrans = t("sectionsMenu.otherSections." + itemName);
+    const itemTrans = t("" + itemName);
 
     return (
       <a href={item.url} key={`item-${index}`}>

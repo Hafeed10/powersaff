@@ -138,46 +138,11 @@ export const LANGUAGES = [
     id: 1,
   },
   {
-    lang: "Russian",
-    flag: russiaFlag,
-    flagName: "Russia",
-    code: "ru",
-    id: 2,
-  },
-  {
     lang: "Arabic",
     flag: saudiFlag,
     flagName: "Saudi Arabia",
     code: "ar",
     id: 3,
-  },
-  {
-    lang: "French",
-    flag: franceFlag,
-    flagName: "France",
-    code: "fr",
-    id: 4,
-  },
-  {
-    lang: "hungarian",
-    flag: hungaryFlag,
-    flagName: "Hungary",
-    code: "hu",
-    id: 5,
-  },
-  {
-    lang: "Japanese",
-    flag: japanFlag,
-    flagName: "Japan",
-    code: "ja",
-    id: 6,
-  },
-  {
-    lang: "Hindi",
-    flag: indiaFlag,
-    flagName: "India",
-    code: "hi",
-    id: 7,
   },
 ];
 
@@ -234,6 +199,12 @@ export const mobileNavData = [
     icon: "user",
     requiteSignIn: true,
   },
+  {
+    name: "Products",
+    link: "/Product",
+    icon: "Product",
+    requiteSignIn: true,
+  },
 ];
 
 export const womenFashionMenuItems = [
@@ -245,11 +216,11 @@ export const menFashionMenuItems = [
 
 export const otherSectionsMenuItems = [
   { name: "Electronics", url: "/#" },
-  { name: "Home & Lifestyle", url: "/#" },
-  { name: "Medicine", url: "/#" },
-  { name: "Sports & Outdoor", url: "/#" },
-  { name: "Groceries & Pets", url: "/#" },
-  { name: "Health & Beauty", url: "/#" },
+  { name: "Inverter", url: "/#" },
+  { name: "MPPT", url: "/#" },
+  { name: "Battery Charger", url: "/#" },
+  { name: "Stabilizer", url: "/#" },
+  { name: "Battery", url: "/#" },
 ];
 
 export const mySocialMedia = [

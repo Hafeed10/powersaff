@@ -11,6 +11,7 @@ import OurProductsSection from "./OurProductsSection/OurProductsSection";
 import ProductPoster from "./ProductPoster/ProductPoster";
 import ThisMonthSection from "./ThisMonthSection/ThisMonthSection";
 import TodaySection from "./TodaySection/TodaySection";
+import Addes from "./Addes/Addes";
 
 const Home = () => {
   useScrollOnMount();
@@ -37,6 +38,7 @@ const Home = () => {
           </div>
 
           <TodaySection />
+          <Addes/>
           <CategoriesSection />
           <ThisMonthSection />
           <ProductPoster />

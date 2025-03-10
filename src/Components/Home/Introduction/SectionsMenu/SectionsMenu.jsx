@@ -30,13 +30,11 @@ const SectionsMenu = () => {
 
         <h2>{t("sectionsMenu.title")}</h2>
 
-        <DropDownMenu nameMenu={t("sectionsMenu.womenFashion.title")}>
+        <DropDownMenu nameMenu={t("womenFashion.title")}>
           <ul className={s.dropDownMenu} role="menu">
             {womenFashionMenuItems.map((item, index) => {
               const itemName = camelCase(item.name);
-              const itemTrans = t(
-                "sectionsMenu.womenFashion.menuItems." + itemName
-              );
+              const itemTrans = t(`sectionsMenu.womenFashion.${itemName}`, item.name);
 
               return (
                 <li key={`item-${index}`} role="menuitem">
@@ -47,13 +45,12 @@ const SectionsMenu = () => {
           </ul>
         </DropDownMenu>
 
-        <DropDownMenu nameMenu={t("sectionsMenu.menFashion.title")}>
+        <DropDownMenu nameMenu={t("menFashion.title")}>
           <ul className={s.dropDownMenu} role="menu">
             {menFashionMenuItems.map((item, index) => {
               const itemName = camelCase(item.name);
-              const itemTrans = t(
-                "sectionsMenu.menFashion.menuItems." + itemName
-              );
+              const itemTrans = t(`sectionsMenu.menFashion.${itemName}`, item.name);
+
               return (
                 <li key={`item-${index}`} role="menuitem">
                   <a href={item.url}>{itemTrans}</a>
@@ -63,7 +60,13 @@ const SectionsMenu = () => {
           </ul>
         </DropDownMenu>
 
-        <OtherSections data={otherSectionsMenuItems} />
+        {/* Pass translated names */}
+        <OtherSections
+          data={otherSectionsMenuItems.map((item) => ({
+            ...item,
+            name: t(`sectionsMenu.otherSections.${item.name}`, item.name),
+          }))}
+        />
       </aside>
     </>
   );

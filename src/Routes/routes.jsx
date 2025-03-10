@@ -8,6 +8,7 @@ import Home from "../Components/Home/Home";
 import LogIn from "../Components/LogIn/LogIn";
 import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
 import OrderPage from "../Components/OrderPage/OrderPage";
+import Product from "../Components/Product/Product";
 import ProductDetailsPage from "../Components/ProductDetailsPage/ProductDetailsPage";
 import ProductsCategoryPage from "../Components/ProductsCategory/ProductsCategoryPage";
 import ProductsPage from "../Components/ProductsPage/ProductsPage";
@@ -19,6 +20,7 @@ export const ROUTES_CONFIG = [
   { path: "/", element: <Home /> },
   { path: "/contact", element: <Contact /> },
   { path: "/about", element: <About /> },
+  { path: "/Product", element: <Product /> },
   { path: "/details", element: <ProductDetailsPage /> },
   { path: "/category", element: <ProductsCategoryPage /> },
   { path: "/products", element: <ProductsPage /> },

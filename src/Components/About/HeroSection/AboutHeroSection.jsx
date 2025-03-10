@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Image from '../../../Assets/Images/de.jpg';
+import Image from '../../../Assets/Images/kk.jpg';
 import s from "./AboutHeroSection.module.scss";
 
 const AboutHeroSection = () => {

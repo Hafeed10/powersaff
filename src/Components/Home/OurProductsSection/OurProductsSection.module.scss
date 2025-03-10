@@ -4,22 +4,47 @@
   margin-bottom: 170px;
 }
 
-@include m.small {
-  .ourProductsSection {
-    margin-bottom: 100px;
-  }
-}
-
 .wrapper {
   display: flex;
   gap: 87px;
   margin-bottom: 40px;
-}
 
-@include m.small {
-  .wrapper {
+  @include m.small {
     flex-direction: column;
     gap: 0;
+  }
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}
+
+.max {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  max-width: 100%;
+
+  img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+
+    @include m.small {
+      max-width: 100%;
+    }
   }
 }
 
@@ -30,33 +55,27 @@
   outline: none;
   cursor: pointer;
   width: fit-content;
-  white-space: nowrap;
   background: var(--dark-red);
   color: var(--white);
   padding: 12px 48px;
-  margin: 0 auto;
+  margin: 20px auto;
   border-radius: 4px;
-  letter-spacing: 0em;
   font-weight: 500;
-  outline: solid 2px transparent;
-  outline-offset: -2px;
-  transition: background .2s;
+  transition: background 0.2s;
 
   &:focus-visible {
     transition: var(--outline-transition);
-    outline-color: var(--tomato);
-    color: var(--very-dark-gray);
+    outline: solid 2px var(--tomato);
     background: transparent;
     color: var(--tomato);
   }
 
-  &:not(:focus-visible):hover {
+  &:hover {
     background: var(--tomato);
   }
-}
 
-@include m.very-small {
-  .viewProductsBtn {
+  @include m.very-small {
     padding: 12px 24px;
+    font-size: 14px;
   }
 }

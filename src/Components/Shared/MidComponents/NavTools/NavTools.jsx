@@ -1,3 +1,4 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import IconWithCount from "../../NavTools/IconWithCount/IconWithCount";
@@ -11,11 +12,21 @@ const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
     (state) => state.products
   );
 
+  // Customer Service Data
+  const customerService = {
+    id: "1",
+    title: "Customer Service",
+    subtitle: "+91 9446180100",
+  };
+
   return (
     <div className={s.navTools}>
+      {/* Search Input */}
       <SearchProductsInput />
 
+      {/* Tools Section */}
       <div className={s.tools}>
+        {/* Favorites Icon */}
         <IconWithCount
           props={{
             visibility: showHeart,
@@ -26,6 +37,7 @@ const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
           }}
         />
 
+        {/* Cart Icon */}
         <IconWithCount
           props={{
             visibility: showCart,
@@ -36,7 +48,14 @@ const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
           }}
         />
 
+        {/* User Profile Icon */}
         <UserMenuIcon visibility={showUser} />
+      </div>
+
+      {/* Customer Service Section */}
+      <div className={s.customerService}>
+        <span className={s.serviceTitle}>{customerService.title}</span>
+        <span className={s.serviceNumber}>{customerService.subtitle}</span>
       </div>
     </div>
   );

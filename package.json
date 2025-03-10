@@ -31,7 +31,8 @@
     "react-router-dom": "^7.1.5",
     "router-dom": "^3.0.1",
     "sass": "^1.85.0",
-    "swiper": "^11.2.3",
+    "sharp": "^0.33.5",
+    "swiper": "^11.2.5",
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {

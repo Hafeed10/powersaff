@@ -23,7 +23,7 @@
   margin: 0 auto;
   display: grid;
   align-items: center;
-  grid-template-columns: 26% 1fr;
+  grid-template-columns: 20% 1fr;
 }
 
 @include m.large {
@@ -75,18 +75,22 @@
 .container h1:has(:focus)>a::before {
   width: 100%;
 }
-
 .headerContent {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px; // Adjust the spacing between nav and icons
 }
 
+
 @include m.medium {
-  .headerContent {
-    margin-top: 10px;
+  .container {
+    width: var(--container-width);
+    grid-template-columns: 15% 1fr;
   }
 }
+
+
 
 @include m.small {
   .headerContent {
