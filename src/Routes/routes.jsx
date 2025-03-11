@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import About from "../Components/About/About";
 import AccountPage from "../Components/AccountPage/AccountPage";
 import Cart from "../Components/Cart/Cart";
@@ -18,6 +19,13 @@ import SearchPage from "../Components/Search/SearchPage";
 import SignUp from "../Components/SignUp/SignUp";
 import WishList from "../Components/WishList/WishList";
 
+// Protected Route Component
+const ProtectedRoute = ({ children }) => {
+  const isAuthenticated = localStorage.getItem("isAuthenticated");
+  return isAuthenticated ? children : <Navigate to="/admin" />;
+};
+
+// Routes Configuration
 export const ROUTES_CONFIG = [
   { path: "/", element: <Home /> },
   { path: "/contact", element: <Contact /> },
@@ -37,5 +45,5 @@ export const ROUTES_CONFIG = [
   { path: "/search", element: <SearchPage /> },
   { path: "*", element: <NotFoundPage /> },
   { path: "/admin", element: <Login /> },
-  { path: "/Add_Prodcut", element: <Add_Prodcut /> },
+  { path: "/Add_Product", element: <ProtectedRoute><Add_Prodcut /></ProtectedRoute> }
 ];

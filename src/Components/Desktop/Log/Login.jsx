@@ -1,11 +1,11 @@
 import React from 'react';
 import { Form, Input, Button, Checkbox, message } from 'antd';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import admin from '../../../Assets/admin/admin.webp';
 
 function Login() {
-    const navigate = useNavigate(); // Initialize navigation function
+    const navigate = useNavigate(); 
 
     const onFinish = (values) => {
         const { username, password } = values;
@@ -13,14 +13,15 @@ function Login() {
         // Check login credentials
         if (username === 'jabbarpkn' && password === 'jabbar123') {
             message.success('Login successful!');
-            navigate('/Add_Prodcut'); // Redirect to the Dashboard page
+
+            // Store login status in localStorage
+            localStorage.setItem('isAuthenticated', 'true');
+
+            // Redirect to Add_Product page
+            navigate('/Add_Product'); 
         } else {
             message.error('Invalid username or password!');
         }
-    };
-
-    const onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
     };
 
     return (
@@ -36,7 +37,6 @@ function Login() {
                     name="login-form"
                     initialValues={{ remember: true }}
                     onFinish={onFinish}
-                    onFinishFailed={onFinishFailed}
                     className="login-form"
                 >
                     <p className="form-title">Welcome back</p>
