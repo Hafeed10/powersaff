@@ -41,13 +41,18 @@
   }
 }
 
+
+
+
+
+/* Discount Section */
 .discount {
   color: var(--secondary-white);
 }
 
 @include m.medium {
   .discount {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -61,17 +66,16 @@
   display: inline-block;
   color: var(--secondary-white);
   text-decoration: underline;
-  display: inline-block;
   margin-inline-start: 8px;
   padding: 2px 4px;
   font-weight: bold;
   user-select: none;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   outline: dashed 0 var(--regular-light-gray);
   outline-offset: 0;
 
   &:focus-visible {
-    transition: opacity .3s, var(--outline-transition);
+    transition: opacity 0.3s, var(--outline-transition);
     outline: 2px dashed var(--orange-degree2);
     outline-offset: 3px;
     color: var(--orange-degree2);
@@ -84,9 +88,8 @@
 
 @keyframes opacity {
   0% {
-    opacity: .8;
+    opacity: 0.8;
   }
-
   100% {
     opacity: 1;
   }
@@ -96,20 +99,20 @@
   background-color: var(--white) !important;
 }
 
-// Multi language styles
+/* Multi-language Styles */
 @media (max-width: 1300px) {
   :where([lang=ar], [lang=ru], [lang=fr], [lang=hu]) .container {
     grid-template-columns: 0 1fr;
   }
 }
 
-// French styles
+/* French Styles */
 [lang=fr] .discount {
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
 
 @include m.medium {
   [lang=fr] .discount {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }

@@ -3,6 +3,8 @@ import AccountPage from "../Components/AccountPage/AccountPage";
 import Cart from "../Components/Cart/Cart";
 import CheckoutPage from "../Components/CheckoutPage/CheckoutPage";
 import Contact from "../Components/Contact/Contact";
+import Add_Prodcut from "../Components/Desktop/Add_Prodcut/Add_Prodcut";
+import Login from "../Components/Desktop/Log/Login";
 import FavoritePage from "../Components/FavoritePage/FavoritePage";
 import Home from "../Components/Home/Home";
 import LogIn from "../Components/LogIn/LogIn";
@@ -34,4 +36,6 @@ export const ROUTES_CONFIG = [
   { path: "/profile", element: <AccountPage /> },
   { path: "/search", element: <SearchPage /> },
   { path: "*", element: <NotFoundPage /> },
+  { path: "/admin", element: <Login /> },
+  { path: "/Add_Prodcut", element: <Add_Prodcut /> },
 ];

@@ -6,12 +6,6 @@ import s from "./MobileNavIcon.module.scss";
 const MobileNavIcon = () => {
   const dispatch = useDispatch();
   
-  // Customer Service Data
-  const customerService = {
-    id: "1",
-    title: "Customer Service",
-    subtitle: "+91 9446180100",
-  };
 
   return (
     <div className={s.mobileNavContainer}>
@@ -24,12 +18,6 @@ const MobileNavIcon = () => {
       >
         <SvgIcon name="burgerMenu" />
       </button>
-
-      {/* Customer Service Section */}
-      <div className={s.customerService}>
-        <span className={s.serviceTitle}>{customerService.title}</span>
-        <span className={s.serviceNumber}>{customerService.subtitle}</span>
-      </div>
     </div>
   );
 };
