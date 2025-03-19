@@ -1,5 +1,6 @@
 import s from "./EditProfileInput.module.scss";
 
+
 const EditProfileInput = ({
   inputData: {
     label,

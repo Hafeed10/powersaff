@@ -66,3 +66,5 @@ const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
 };
 
 export default ProductCardInfo;
+
+

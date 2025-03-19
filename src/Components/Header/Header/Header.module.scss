@@ -44,6 +44,12 @@
 .container h1 {
   width: fit-content;
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.container h1 img{
+  width: 200px;
+  height: 40px;
 }
 
 .container h1>a {

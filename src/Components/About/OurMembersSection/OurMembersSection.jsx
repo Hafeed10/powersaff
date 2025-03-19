@@ -3,33 +3,28 @@ import { ourMembersData } from "src/Data/staticData";
 import MemberCard from "../../Shared/MidComponents/MemberCard/MemberCard";
 import s from "./OurMembersSection.module.scss";
 import SectionsMenu from "../../Home/Introduction/SectionsMenu/SectionsMenu";
-import MainSlider from "../../Home/Introduction/MainSlider/MainSlider";
 
 const OurMembersSection = () => {
   return (
     <section className={s.ourMembersSection}>
-      <div className={s.introductionContainer}>
+        <div className="introductionContainer">
         <SectionsMenu />
-        <div className={s.line} />
-        <MainSlider />
+        <div className="line" />
+        <div />
       </div>
       <div className={s.header}>
         <h2 className={s.title}>Abdul Jabbar Ak</h2>
         <h3>Founder & Chairman</h3>
         <p className={s.description}>
-          powersaff  whose foundations have been laid by Mr. Abdul Jabbar, has been in the
-          industry for the past 5 years. With more than 3+ decades of experience, our team has an
-          immense wealth of knowledge and expertise when it comes to batteries for your needs. We
-          began our operations in Manjeri of the Malappuram district and later on expanded our base
-          to Palakkad which now boasts with all the latest developments in the field. Our latest plant
-          has the capacity to manufacture high quality and excellent batteries in Tubular as well as
-          Automotive series. We, at powersaff, provide all sorts of paraphernalia related to solar power s
-          ystems, including solar power controllers and chargers like MPPT and PWM. We also provide all
-          that is required for an offline UPS along with all its addons. Apart from these products, we
-          also manufacture and offer a wide range of top-quality solar panels along with their grid inverters.
-          Installing solar power systems in residences and commercial premises has never been easier. With powersaff.
+          Powersaff, founded by Mr. Abdul Jabbar, has been in the industry for the past 5 years. 
+          With over three decades of experience, our team has immense expertise in battery solutions. 
+          We started in Manjeri, Malappuram, and later expanded to umaramputhur pallikunnu, now housing state-of-the-art 
+          inverter manufacturing facilities. Our latest plant produces high-quality tubular and automotive 
+          inverters. At Powersaff, we offer solar power solutions, including MPPT/PWM controllers, UPS systems, 
+          and premium solar panels with grid inverters, making residential and commercial solar installations easier.
         </p>
       </div>
+
       <div className={s.membersContainer}>
         {ourMembersData.map((member) => (
           <MemberCard key={member.id} data={member} />

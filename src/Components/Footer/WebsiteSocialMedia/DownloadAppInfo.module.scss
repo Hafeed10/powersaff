@@ -1,4 +1,4 @@
-@use "src/Styles/mixins" as m;
+@use "src/Styles/mixins" as *;
 
 .appInfo {
   display: flex;
@@ -6,7 +6,7 @@
 }
 
 .qrCode {
-  --size: 76px;
+  --size: 86px;
   min-width: var(--size);
   min-height: var(--size);
   max-width: var(--size);
@@ -19,16 +19,16 @@
   outline: solid 2px var(--orange-degree2);
 }
 
-.downloadButtons>button {
+.downloadButtons > button {
   display: block;
   background-color: transparent;
   border: none;
-  outline: none;
-  width: 104px;
-  height: 30px;
+  width:fit-content;
+  height: 50px;
   border-radius: 4px;
   border: solid 1px var(--white);
   cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
 
   &:not(:last-child) {
     margin-bottom: 16px;
@@ -39,9 +39,12 @@
   }
 }
 
-.downloadButtons>button>img {
+.downloadButtons > button > img {
   border-radius: inherit;
-  scale: .8;
+  transform: scale(0.8);
+  transform-origin: center;
+  width: 200px;
+  height: 50px;
 }
 
 .socialMedia {
@@ -50,38 +53,46 @@
   gap: 8px;
 }
 
-.socialMedia>a {
+.socialMedia > a {
   width: 40px;
   height: 40px;
   border-radius: 6px;
   filter: grayscale(1);
-  -webkit-filter: grayscale(1);
-  -moz-filter: grayscale(1);
-  -ms-filter: grayscale(1);
-  -o-filter: grayscale(1);
-  @include m.center-x-y;
+  @include center-x-y;
   position: relative;
+  transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
   &:focus-visible {
-    transition: opacity .3s, filter .3s .2s;
     outline: solid 2px var(--orange-degree2);
     filter: grayscale(0);
-    -webkit-filter: grayscale(0);
-    -moz-filter: grayscale(0);
-    -ms-filter: grayscale(0);
-    -o-filter: grayscale(0);
     opacity: 1;
   }
 }
 
-.socialMedia>a:not([title="instagram" i]):focus-visible svg {
+.socialMedia > a:not([title="instagram" i]):focus-visible svg {
   fill: var(--orange-degree2);
 }
 
-.socialMedia>a[title="instagram" i]:focus-visible svg {
+.socialMedia > a[title="instagram" i]:focus-visible svg {
   stroke: var(--orange-degree2);
 
   & path {
     stroke: var(--orange-degree2);
+  }
+}
+
+/* 📌 Responsive Fixes */
+@media (max-width: 768px) {
+  .appInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .qrCode {
+    --size: 60px; // Reduce size for mobile
+  }
+
+  .socialMedia {
+    justify-content: center;
   }
 }

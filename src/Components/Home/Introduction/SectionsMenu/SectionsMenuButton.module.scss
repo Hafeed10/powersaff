@@ -1,6 +1,6 @@
 @use "src/Styles/mixins" as m;
 
-.sectionsMenuButton {
+.sectionsButton {
   -webkit-tap-highlight-color: transparent;
   position: absolute;
   left: 20px;
@@ -23,35 +23,35 @@
 }
 
 @include m.large {
-  .sectionsMenuButton {
+  .sectionsButton {
     display: block;
   }
 }
 
 @include m.medium {
-  .sectionsMenuButton {
+  .sectionsButton {
     top: 129px;
   }
 }
 
 @include m.very-small {
-  .sectionsMenuButton {
+  .sectionsButton {
     left: 10px;
   }
 }
 
-.sectionsMenuButton>svg {
+.sectionsButton>svg {
   width: 25px;
   height: 25px;
 }
 
 // Arabic styles
-[lang=ar] .sectionsMenuButton {
+[lang=ar] .sectionsButton {
   top: 120px;
 }
 
 @include m.medium {
-  [lang=ar] .sectionsMenuButton {
+  [lang=ar] .sectionsButton {
     top: 126px;
   }
 }

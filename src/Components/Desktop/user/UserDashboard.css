@@ -1,0 +1,147 @@
+/* Container */
+.user-dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* User Profile Section */
+.user-profile {
+    background-color: #fff5f7;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ffd6e7;
+    text-align: center;
+}
+
+.user-profile img {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    border: 1px solid #d1d5db;
+}
+
+/* Order Details Section */
+.order-details {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 10px;
+}
+
+.order-details h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Order Summary */
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ffd6e7;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.summary-left {
+    width: 100%;
+    background-color: #fff5f7;
+    padding: 20px;
+    max-width: 250px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.summary-item {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.summary-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111827;
+}
+
+/* Status Badge */
+.status-badge {
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.bg-green {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.bg-yellow {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.bg-blue {
+    background-color: #dbf4ff;
+    color: #1e40af;
+}
+
+.bg-purple {
+    background-color: #ede9fe;
+    color: #5b21b6;
+}
+
+/* Product List */
+.product-list {
+    padding: 20px;
+    flex: 1;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.product-img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+}
+
+.product-info {
+    margin-left: 16px;
+}
+
+.product-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #111827;
+}
+
+.product-color {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.product-quantity {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+.product-price {
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: bold;
+    color: #111827;
+}

@@ -29,7 +29,7 @@ const CustomEmailInput = () => {
     rotate: i18n.dir() === "rtl" ? "180deg" : "0deg",
   };
 
-  // Tooltip variables
+  // Tooltip positions
   const sendIconToolTipTopPos =
     windowWidth <= SCREEN_SIZES.mobile ? "-13px" : "50%";
 
@@ -52,13 +52,10 @@ const CustomEmailInput = () => {
     : t("footer.section1.sendLabel");
 
   const sendEmail = (e) => {
-    const emailInput = e.target.querySelector("input");
-
     e.preventDefault();
-    if (loading || !isEmailValid(emailInput)) return;
+    if (loading || !isEmailValid(email)) return;
 
     subscription();
-    emailRef.current.blur();
   };
 
   const subscription = () => {
@@ -70,6 +67,9 @@ const CustomEmailInput = () => {
     if (isWebsiteOnline) {
       setLoading(true);
       setEmail("");
+      if (emailRef.current) {
+        emailRef.current.value = ""; // Ensure input is cleared
+      }
     }
 
     setTimeout(() => {
@@ -82,19 +82,17 @@ const CustomEmailInput = () => {
     <form className={s.form} onSubmit={sendEmail}>
       <input
         type="email"
+        required
         placeholder={t("inputsPlaceholders.enterYourEmail")}
         value={email}
         autoComplete="off"
-        aria-describedby="email-tooltip"
         onChange={(e) => setEmail(e.target.value)}
         ref={emailRef}
-        aria-required="false"
       />
 
       <button aria-label="Send mail" type="submit">
         <div style={sendIconDirection}>
-          {!loading && <SvgIcon name="vector" />}
-          {loading && <SpinnerLoading />}
+          {!loading ? <SvgIcon name="vector" /> : <SpinnerLoading />}
         </div>
 
         <ToolTip

@@ -10,15 +10,22 @@ function Login() {
     const onFinish = (values) => {
         const { username, password } = values;
 
-        // Check login credentials
-        if (username === 'jabbarpkn' && password === 'jabbar123') {
+        // Dummy user data for login simulation (Replace with API call)
+        const users = [
+            { username: "jabbarpkn", password: "jabbar123", role: "admin" },
+            { username: "user123", password: "userpass", role: "user" }
+        ];
+
+        const user = users.find(user => user.username === username && user.password === password);
+
+        if (user) {
             message.success('Login successful!');
 
-            // Store login status in localStorage
-            localStorage.setItem('isAuthenticated', 'true');
+            // Store login status and user role in localStorage
+            localStorage.setItem('users', JSON.stringify({ username, role: user.role }));
 
-            // Redirect to Add_Product page
-            navigate('/Add_Product'); 
+            // Redirect based on role
+            navigate(user.role === "admin" ? "/add-productPage" : "/admin-dashboard");
         } else {
             message.error('Invalid username or password!');
         }

@@ -6,10 +6,11 @@ import s from "./EditProfileInputs.module.scss";
 
 const EditProfileInputs = () => {
   const { loginInfo } = useSelector((state) => state.user);
-  const { username, emailOrPhone, address } = loginInfo;
-  const firstLastUserName = username.split(" ");
-  const [firstName, setFirstName] = useState(firstLastUserName[0]);
-  const [lastName, setLastName] = useState(firstLastUserName[1]);
+  const { username = "", emailOrPhone = "", address = "" } = loginInfo || {};
+
+  const nameParts = username.split(" ");
+  const [firstName, setFirstName] = useState(nameParts[0] || "");
+  const [lastName, setLastName] = useState(nameParts[1] || "");
   const [emailOrPhoneState, setEmailOrPhoneState] = useState(emailOrPhone);
   const [newPassword, setNewPassword] = useState("");
   const [addressState, setAddress] = useState(address);
@@ -86,4 +87,5 @@ const EditProfileInputs = () => {
     </section>
   );
 };
+
 export default EditProfileInputs;

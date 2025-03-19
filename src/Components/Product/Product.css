@@ -43,7 +43,9 @@
 ul li {
     list-style: none;
 }
-
+h2 , h3 {
+    color: white;
+}
 ul li button {
     background: none;
     border: 2px solid #d4c1c1;
@@ -51,13 +53,14 @@ ul li button {
     cursor: pointer;
     border-radius: 30px;
     font-size: 13px;
+    color: black;
     transition: all 0.3s ease;
 }
 
 ul li button:hover,
 ul li button.active {
     background: black;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 /* Introduction Section */
@@ -104,7 +107,7 @@ ul li button.active {
     bottom: 10px;
     left: 10px;
     background: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: rgb(11, 11, 11);
     padding: 10px;
     border-radius: 5px;
 }
@@ -119,7 +122,7 @@ ul li button.active {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: red;
+    color: rgb(28, 26, 26);
 }
 
 /* Responsive Design */

@@ -23,7 +23,6 @@ const RemoveCartProductBtn = ({ productId }) => {
       setToolTipTopPos("-20px");
       return;
     }
-
     setToolTipLeftPos(cartProductToolTipPos(i18n.language));
     setToolTipTopPos("50%");
   }
@@ -39,7 +38,7 @@ const RemoveCartProductBtn = ({ productId }) => {
       aria-label="Remove product from cart"
       onClick={() => removeProduct(dispatch, productId)}
     >
-      <SvgIcon name="xMark" />
+      <SvgIcon name="xMark"/>
       <ToolTip
         top={toolTipTopPos}
         left={toolTipLeftPos}
@@ -48,9 +47,9 @@ const RemoveCartProductBtn = ({ productId }) => {
     </button>
   );
 };
+
 export default RemoveCartProductBtn;
 
 function removeProduct(dispatch, productId) {
-  const removeAction = removeById({ key: "cartProducts", id: productId });
-  dispatch(removeAction);
+  dispatch(removeById({ key: "cartProducts", id: productId }));
 }

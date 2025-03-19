@@ -21,6 +21,7 @@ const CategoriesSlider = () => {
           <CategoryCard categoryData={categoryData} key={categoryData.id} />
         ))}
       </div>
+      
     </>
   );
 };

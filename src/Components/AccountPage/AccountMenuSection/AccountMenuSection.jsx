@@ -44,8 +44,6 @@ const AccountMenuSection = () => {
         </section>
 
         <section className={s.section}>
-          <h2>{t(`${accountMenu}.myOrders`)}</h2>
-
           <ul>
             <li>
               <a href="#">{t(`${accountMenu}.myOrders`)}</a>

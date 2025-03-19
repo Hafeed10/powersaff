@@ -1,38 +1,35 @@
 @use "src/Styles/mixins" as m;
 
+/* Introduction Section */
+.introductionContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  display: none;
+}
 .ourMembersSection {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid #e9ecef;
   padding: 40px 20px;
   background-color: #f8f9fa;
   overflow: hidden;
-.membersContainer{
-  background: #126e63;
-  height: 300px;
-  padding: 10px 20px;
-}
-  @media (min-width: 768px) { 
-    flex-direction: row; /* Side-by-side on larger screens */
+
+  @media (min-width: 768px) {
+    flex-direction: row; // Side-by-side layout on larger screens
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
-    height: auto;
   }
 
-  .membersContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex: 1;
-    width: 100%;
-
+  .introductionContainer {
+    display: none;
+  
     @media (min-width: 768px) {
-      width: 50%; /* Take up half the width */
+      display: block;
     }
   }
 
@@ -52,6 +49,7 @@
       color: #044a42;
       margin-bottom: 10px;
     }
+    
 
     h3 {
       font-size: 1rem;
@@ -62,8 +60,23 @@
       font-size: 1rem;
       color: #555;
       line-height: 1.5;
-      width: 100%;
       text-align: start;
+    }
+  }
+
+  .membersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #126e63;
+    height: auto;
+    padding: 20px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: 50%; // Take up half the width on larger screens
     }
   }
 }

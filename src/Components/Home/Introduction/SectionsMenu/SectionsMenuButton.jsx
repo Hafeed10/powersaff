@@ -1,28 +1,30 @@
 import { useDispatch } from "react-redux";
-import { multiUpdateGlobalState } from "src/Features/globalSlice";
+import { multiUpdateGlobalState } from "src/Features/globalSlice"; // Ensure correct path
 import SvgIcon from "../../../Shared/MiniComponents/SvgIcon";
 import s from "./SectionsMenuButton.module.scss";
 
 const SectionsMenuButton = () => {
   const dispatch = useDispatch();
 
+  const handleClick = () => {
+    dispatch(
+      multiUpdateGlobalState({
+        isSectionsMenuActive: true,
+        isOverlayActive: true,
+      })
+    );
+  };
+
   return (
     <button
       type="button"
-      onClick={() => openSectionMenu(dispatch)}
-      className={s.sectionsMenuButton}
+      onClick={handleClick}
+      className={s.sectionsButton}
       aria-label="Toggle sections menu"
     >
       <SvgIcon name="list" />
     </button>
   );
 };
-export default SectionsMenuButton;
 
-function openSectionMenu(dispatch) {
-  const payload = {
-    isSectionsMenuActive: true,
-    isOverlayActive: true,
-  };
-  dispatch(multiUpdateGlobalState(payload));
-}
+export default SectionsMenuButton;

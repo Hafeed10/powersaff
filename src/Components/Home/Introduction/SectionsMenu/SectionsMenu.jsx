@@ -24,7 +24,6 @@ const SectionsMenu = () => {
   return (
     <>
       <SectionsMenuButton />
-
       <aside className={`${s.sectionsMenu} ${activeClass}`}>
         {windowWidth <= SCREEN_SIZES.desktop && <SectionsMenuCloseBtn />}
 

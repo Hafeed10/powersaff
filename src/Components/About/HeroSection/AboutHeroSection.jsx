@@ -8,8 +8,7 @@ const AboutHeroSection = () => {
   return (
     <section className={s.heroSection}>
       <section className={s.content}>
-        <h2>{t("aboutPage.heroSection.heading")}</h2>
-
+        <h2 className={s.aboutone}>Our Story</h2>
         <p>Electronics refers to the branch of science and technology that deals with the design,
           development, and application of devices and systems that use
           electrical circuits involving active components such as transistors,

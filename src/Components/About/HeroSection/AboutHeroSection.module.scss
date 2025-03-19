@@ -1,5 +1,6 @@
 @use "src/Styles/mixins" as m;
 
+
 .heroSection {
   display: flex;
   align-items: center;
@@ -11,7 +12,10 @@
   margin-top: 60px;
   margin-bottom: 140px;
 }
-
+.aboutone{
+  color: black;
+  font-size: 60px;
+}
 @include m.large {
   .introductionContainer {
     flex-direction: column-reverse;

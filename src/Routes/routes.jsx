@@ -4,7 +4,6 @@ import AccountPage from "../Components/AccountPage/AccountPage";
 import Cart from "../Components/Cart/Cart";
 import CheckoutPage from "../Components/CheckoutPage/CheckoutPage";
 import Contact from "../Components/Contact/Contact";
-import Add_Prodcut from "../Components/Desktop/Add_Prodcut/Add_Prodcut";
 import Login from "../Components/Desktop/Log/Login";
 import FavoritePage from "../Components/FavoritePage/FavoritePage";
 import Home from "../Components/Home/Home";
@@ -18,10 +17,11 @@ import ProductsPage from "../Components/ProductsPage/ProductsPage";
 import SearchPage from "../Components/Search/SearchPage";
 import SignUp from "../Components/SignUp/SignUp";
 import WishList from "../Components/WishList/WishList";
+import AddProductPage from "../Components/Desktop/admin/AddProductPage";
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
-  const isAuthenticated = localStorage.getItem("isAuthenticated");
+  const isAuthenticated = JSON.parse(localStorage.getItem("isAuthenticated")) || false;
   return isAuthenticated ? children : <Navigate to="/admin" />;
 };
 
@@ -30,7 +30,7 @@ export const ROUTES_CONFIG = [
   { path: "/", element: <Home /> },
   { path: "/contact", element: <Contact /> },
   { path: "/about", element: <About /> },
-  { path: "/Product", element: <Product /> },
+  { path: "/product", element: <Product /> },
   { path: "/details", element: <ProductDetailsPage /> },
   { path: "/category", element: <ProductsCategoryPage /> },
   { path: "/products", element: <ProductsPage /> },
@@ -45,5 +45,5 @@ export const ROUTES_CONFIG = [
   { path: "/search", element: <SearchPage /> },
   { path: "*", element: <NotFoundPage /> },
   { path: "/admin", element: <Login /> },
-  { path: "/Add_Product", element: <ProtectedRoute><Add_Prodcut /></ProtectedRoute> }
+  { path: "/add-productPage", element: <AddProductPage/>},
 ];

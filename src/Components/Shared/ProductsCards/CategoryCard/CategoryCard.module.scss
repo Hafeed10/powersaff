@@ -3,18 +3,18 @@
 .card {
   -webkit-tap-highlight-color: transparent;
   scroll-snap-align: start;
-  border-radius: 4px;
-  border: solid 1px #0000004D;
   outline: 2px solid transparent;
   outline-offset: -2px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background: rgb(39, 38, 38);
+  border-radius: 10%;
   transition: background-color .2s;
 
   &:not(:focus-visible):hover {
-    background-color: var(--tomato);
+    background-color: rgb(113, 109, 109);
     border-color: var(--tomato);
   }
 
@@ -64,7 +64,7 @@
 
 .card span {
   margin-top: 26px;
-  color: var(--black);
+  color: var(--white);
 }
 
 .card:not(:focus-visible):hover span {

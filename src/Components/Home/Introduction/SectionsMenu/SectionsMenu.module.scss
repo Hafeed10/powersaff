@@ -11,18 +11,18 @@
 
 @include m.large {
   .sectionsMenu {
-    background-color: var(--white);
+    background-color: rgb(234, 234, 234);
     position: fixed;
     left: -250%;
     top: 0;
-    height: calc(100vh - (100vh - 100%));
+    height: calc(100vh - (100vh - 400px));
     max-height: none;
     z-index: 1000;
-    padding: 18px;
+    padding: 28px;
     padding-inline-end: 86px;
     box-shadow: 0 0 20px -15px var(--black);
     overflow-y: auto;
-    width: fit-content;
+    width: 350px;
     transition: left 1s ease;
 
     &.active {
@@ -103,7 +103,7 @@
 .sectionsMenu>h2 {
   font-weight: 500;
   font-size: 1rem;
-  padding-top: 0;
+  padding-top: 50px;
   padding-bottom: 0;
   margin-bottom: 10px;
   cursor: text;
