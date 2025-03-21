@@ -62,7 +62,7 @@ const ProductDetails = ({ productData }) => {
             {/* ✅ Product Description Section */}
             {productData?.description && (
               <section className={s.productInfo}>
-                <h2>{productData.name}</h2>
+                <h2 className={s.items}>{productData.name}</h2>
                 <p className={s.productDescription}>{productData.description}</p>
               </section>
             )}

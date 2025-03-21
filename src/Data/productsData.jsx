@@ -33,9 +33,54 @@ import image13 from '../Assets/product/product4-removebg-preview.png'
 import image14 from '../Assets/product/product6-removebg-preview.png'
 import image15 from '../Assets/product/product5-removebg-preview.png'
 import image16 from '../Assets/product/dc-ac-power-inverter-1-removebg-preview.png'
+import image32 from '../Assets/product/st1_azyp-v8-removebg-preview.png.avif'
+import image33 from '../Assets/product/batterycharger.png'
+import image34 from '../Assets/product/lithium-pillar-electrode-mfg-iStock-1402359102-removebg-preview.png'
+import image35 from '../Assets/product/hedphone.avif'
+import image36 from '../Assets/product/movse.avif'
+import image37 from '../Assets/product/movse2.avif'
+import image38 from '../Assets/product/watch1.avif'
+import image39 from '../Assets/product/watch2.avif'
+import image40 from '../Assets/product/watch3.avif'
+
 
 
 export const productsData = [
+  {
+    shortName: "Acer Wireless Mouse | White and Green",
+    name: "Acer Wireless Mouse | White and Green",
+    category: "Mouse",
+    price: 1499,
+    discount: 10,
+    description: `
+    1600 DPI Sensor
+    Fast Scroll Wireless Mouse
+    10 m Working Distance
+    Equipped with 2.4 GHz Frequency
+    Nano Receiver`,
+    addedDate: "2024/2/2",
+    img: image36,
+    otherImages: [
+      image36,
+      image37,
+
+    ],
+    colors: [
+      {
+        name: "ice blue",
+        color: "#dcdfea",
+      },
+      {
+        name: "black",
+        color: "#27292d",
+      },
+    ],
+    rate: 5,
+    votes: 28,
+    quantity: 1,
+    sold: 105,
+    id: 1,
+  },
   {
     shortName: "AX_ON",
     name: "AX_ON",
@@ -71,6 +116,37 @@ export const productsData = [
     quantity: 1,
     sold: 105,
     id: 1,
+  },
+  {
+    shortName: "IMPEX Kettle",
+    name: "IMPEX Kettle",
+    category: "",
+    price: 1000,
+    discount: 0,
+    description: `
+    Impex believe in making a positive difference in our customers lives with technological innovations. Every product goes through stringent quality checks before it reaches the customers. The philosophy of putting customers first has helped us scale greater heights during the past decades and has won the trust of discerning customers all over the world.
+    The Impex STEAMER-1801 Electric kettle eliminates all your worries about boiling water on the gas, allowing you to save time and effort. This electric kettle gives you boiled water within a short span of time. It comes in a sleek stainless steel and aluminium die cast body that is sturdily built. With its plastic handle, you get a firm grip over this kettle, and it won't slip from your hands.`,
+    addedDate: "2025/3/18",
+    img: image32,
+    otherImages: [
+      image32,
+
+    ],
+    colors: [
+      {
+        name: "ice blue",
+        color: "#0e0e0f",
+      },
+      {
+        name: "black",
+        color: "#27292d",
+      },
+    ],
+    rate: 5,
+    votes: 50,
+    quantity: 1,
+    sold: 105,
+    id: 201,
   },
 
   {
@@ -178,6 +254,39 @@ export const productsData = [
     sold: 211,
     id: 4,
   },
+  {
+    shortName: "Battery charger hybrid CATCHER BC200",
+    name: "Battery charger hybrid CATCHER BC200",
+    category: "Battery",
+    price: 2500,
+    discount: 4,
+    description: `
+    *BATTERY REVERSE POLARITY PROTECTION
+    *COMPATIBLE FOR LITHIUM TUBULAR AUTOMOTIVE BATTERY
+    *CV,CC CHARGING PROTOCOL
+    *93% EFFICIENCY WITH 200W
+    *3 MODE CHARGING AMPERE AND VOLTAGE
+    *CYCLE BY CYCLE CURRENT LIMIT IMPROVES PROTECTION
+    *SHORT CIRCUIT PROTECTION
+    *TEMPERATURE CONTROLLED COOLING FAN`,
+    addedDate: "2025/3/15",
+    img: image33,
+    otherImages: [
+      image33,
+
+    ],
+    colors: [
+      {
+        name: "black",
+        color: "#151515",
+      },
+    ],
+    rate: 5,
+    quantity: 1,
+    votes: 70,
+    sold: 163,
+    id: 203,
+  },
 
   {
     shortName: "Sayok Inverter",
@@ -190,7 +299,7 @@ export const productsData = [
     of 7.5kW, suitable for various applications from outdoor events to job sites. It 
     features advanced inverter technology for stable power, fuel efficiency for extended 
     run times, and a compact design for easy transport.`,
-   addedDate: "2024/2/7",
+    addedDate: "2024/2/7",
     addedDate: "2024/3/7",
     img: image5,
     otherImages: [image5,],
@@ -250,6 +359,38 @@ export const productsData = [
     sold: 1533,
     id: 6,
   },
+  {
+    shortName: "Apple AirPods 4 | True Wireless | Bluetooth | White",
+    name: "Apple AirPods 4 | True Wireless | Bluetooth | White",
+    category: "AirPods",
+    price: 12900,
+    discount: 5,
+    description: `
+    Orientation Type: In Ear
+    Connectivity: Bluetooth, Version 5.3
+    Battery Life: 30 Hours
+    Fast Charging: Yes
+    Noise Cancellation: No`,
+    addedDate: "2025/3/15",
+    img: image35,
+    otherImages: [image35],
+    colors: [
+      {
+        name: "white",
+        color: "#f8f3ee",
+      },
+      {
+        name: "black",
+        color: "#000000",
+      },
+
+    ],
+    rate: 3.5,
+    votes: 159,
+    quantity: 1,
+    sold: 1533,
+    id: 206,
+  },
 
   {
     shortName: "X-Tra Power",
@@ -292,6 +433,38 @@ export const productsData = [
     quantity: 1,
     sold: 211,
     id: 7,
+  },
+  {
+    shortName: "Lithium-ion Batteries",
+    name: "Lithium-ion Batteries",
+    category: "Battery",
+    price: 250,
+    discount: 0,
+    description: `
+    When the battery is providing power, the lithium ions move from the anode to the cathode, 
+    creating a flow of electricity that provides power. When charging the battery, the ions 
+    move back to the anode, getting ready to provide power again. This back-and-forth movement 
+    of ions is what makes the lithium-ion battery reusable and powerful. The following animation 
+    depicts how a lithium-ion battery works is courtesy of the U.S. Department of Energy.`,
+    addedDate: "2025/3/7",
+    img: image34,
+    otherImages: [image34,],
+    colors: [
+      {
+        name: "blue",
+        color: "#116ce3",
+      },
+      {
+        name: "Dark blue",
+        color: "#070246",
+      },
+
+    ],
+    rate: 5,
+    votes: 75,
+    quantity: 1,
+    sold: 105,
+    id: 205,
   },
 
   {
@@ -371,7 +544,7 @@ export const productsData = [
     of 7.5kW, suitable for various applications from outdoor events to job sites. It 
     features advanced inverter technology for stable power, fuel efficiency for extended 
     run times, and a compact design for easy transport.`,
-   addedDate: "2024/2/7",
+    addedDate: "2024/2/7",
     addedDate: "2024/3/7",
     img: image10,
     otherImages: [
@@ -430,7 +603,7 @@ export const productsData = [
     of 7.5kW, suitable for various applications from outdoor events to job sites. It 
     features advanced inverter technology for stable power, fuel efficiency for extended 
     run times, and a compact design for easy transport.`,
-   addedDate: "2024/2/7",
+    addedDate: "2024/2/7",
     addedDate: "2024/3/7",
     img: image11,
     otherImages: [
@@ -568,7 +741,7 @@ export const productsData = [
         name: "blue gray",
         color: "#4a5274",
       },
-    
+
     ],
     rate: 4.5,
     votes: 55,
@@ -607,6 +780,39 @@ export const productsData = [
     quantity: 1,
     sold: 210,
     id: 17,
+  },
+
+  {
+    shortName: "boAt Wave Astra 3 Smart Watch | 1.83 Inch | Flat Dial ",
+    name: "boAt Wave Astra 3 Smart Watch | 1.83 Inch | Flat Dial ",
+    category: "Watch",
+    price: 1900,
+    discount: 15,
+    description: `
+    230 mAh
+    Bluetooth V5.2
+    HD Display
+    Bluetooth calling
+    Fitness Tracking
+    IP67 Dust, Sweat & Splash `,
+    addedDate: "2024/2/7",
+    img: image38,
+    otherImages: [
+      image38,
+      image39,
+      image40,
+    ],
+    colors: [
+      {
+        name: "black",
+        color: "#03040f",
+      },
+    ],
+    rate: 4.6,
+    votes: 75,
+    quantity: 1,
+    sold: 210,
+    id: 207,
   },
   {
     shortName: "GP11 Gamepad",

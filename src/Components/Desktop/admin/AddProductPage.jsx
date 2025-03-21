@@ -1,8 +1,5 @@
 // AddProductPage.jsx
 import React, { useState } from "react";
-import { addDoc, collection, Timestamp } from "firebase/firestore";
-import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
-import { fireDB, storage } from "../../../firebase/firebaseconfig";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import "./AddProductPage.css";
@@ -15,7 +12,6 @@ const AddProductPage = () => {
         price: "",
         discount: "",
         name: "",
-        discountPoint: "",
         description: "",
     });
 
@@ -39,15 +35,17 @@ const AddProductPage = () => {
             uploadTask.on(
                 "state_changed",
                 (snapshot) => {
-                    const progress =
-                        (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                     console.log(`Upload is ${progress}% done`);
                 },
                 (error) => reject(error),
-                () => {
-                    getDownloadURL(uploadTask.snapshot.ref)
-                        .then((downloadURL) => resolve(downloadURL))
-                        .catch((error) => reject(error));
+                async () => {
+                    try {
+                        const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+                        resolve(downloadURL);
+                    } catch (error) {
+                        reject(error);
+                    }
                 }
             );
         });
@@ -60,22 +58,24 @@ const AddProductPage = () => {
             return toast.error("All fields are required!");
         }
 
+        if (isNaN(product.price) || product.price <= 0) {
+            return toast.error("Invalid price!");
+        }
+
         try {
             setLoading(true);
-            toast.loading("Uploading Image...");
-
+            const toastId = toast.loading("Uploading Image...");
             const imageUrl = await uploadImage();
-            toast.dismiss();
+            toast.dismiss(toastId);
             toast.success("Image uploaded successfully!");
 
             const newProduct = {
-                name: product.name,
+                imageUrl,
                 price: parseFloat(product.price),
-                discount: parseFloat(product.discount) || 0,
-                discountPoint: parseFloat(product.discountPoint) || 0,
+                discount: product.discount ? parseFloat(product.discount) : 0,
+                name: product.name,
                 description: product.description,
-                imageUrl: imageUrl,
-                createdAt: Timestamp.now(),
+                createdAt: new Date(),
             };
 
             console.log("📌 Sending data to Firestore:", newProduct);
@@ -93,40 +93,32 @@ const AddProductPage = () => {
     };
 
     return (
-        <>
-            <div className="section_max">
+        <div className="section_max">
+            <form className="section_loop" onSubmit={handleSubmit}>
                 <div>
-                    <form className="section_loop" onSubmit={handleSubmit}>
-                        <div>
-                            <label>Upload Image:</label>
-                            <input type="file" name="image" onChange={handleChange} />
-                        </div>
-                        <div>
-                            <label>Price:</label>
-                            <input type="number" name="price" value={product.price} onChange={handleChange} />
-                        </div>
-                        <div>
-                            <label>Discount:</label>
-                            <input type="number" name="discount" value={product.discount} onChange={handleChange} />
-                        </div>
-                        <div>
-                            <label>Product Name:</label>
-                            <input type="text" name="name" value={product.name} onChange={handleChange} />
-                        </div>
-                        <div>
-                            <label>Discount Point:</label>
-                            <input type="number" name="discountPoint" value={product.discountPoint} onChange={handleChange} />
-                        </div>
-                        <div>
-                            <label>Description:</label>
-                            <textarea name="description" value={product.description} onChange={handleChange}></textarea>
-                        </div>
-                        <button type="submit" disabled={loading}>Add Product</button>
-                    </form>
-                    {loading && <p>Loading...</p>}
+                    <label>Upload Image:</label>
+                    <input type="file" name="image" onChange={handleChange} />
                 </div>
-            </div>
-        </>
+                <div>
+                    <label>Product Name:</label>
+                    <input type="text" name="name" value={product.name} onChange={handleChange} />
+                </div>
+                <div>
+                    <label>Product Price:</label>
+                    <input type="number" name="price" value={product.price} onChange={handleChange} />
+                </div>
+                <div>
+                    <label>Offer Price:</label>
+                    <input type="number" name="discount" value={product.discount} onChange={handleChange} />
+                </div>
+                <div>
+                    <label>Description:</label>
+                    <textarea name="description" value={product.description} onChange={handleChange}></textarea>
+                </div>
+                <button type="submit" disabled={loading}>Add Product</button>
+            </form>
+            {loading && <p>Loading...</p>}
+        </div>
     );
 };
 
