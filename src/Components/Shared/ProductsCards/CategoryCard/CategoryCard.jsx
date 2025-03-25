@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import s from "./CategoryCard.module.scss";
-import img from '../../../../Assets/admin/smartwatch.png'
-import img1 from '../../../../Assets/admin/headphones.png'
-import img2 from '../../../../Assets/admin/gamepad.png'
-import img3 from '../../../../Assets/admin/accumulator.png'
-import img4 from '../../../../Assets/admin/solar-inverter.png'
+import img from "../../../../Assets/admin/smartwatch.png";
+import img1 from "../../../../Assets/admin/headphones.png";
+import img2 from "../../../../Assets/admin/gamepad.png";
+import img3 from "../../../../Assets/admin/accumulator.png";
+import img4 from "../../../../Assets/admin/solar-inverter.png";
 
 // Updated category images with all images included
 const categoryImages = {
@@ -53,24 +53,23 @@ const categoryImages = {
 
 const CategoryCard = ({ categoryData }) => {
   const { title } = categoryData;
-  const categoryType = title.toLowerCase().replace(/\s/g, ""); // Normalize category type
   const { t } = useTranslation();
 
-  // Translate category title with fallback
-  const categoryTitleTrans = t(`categoriesData.${categoryType}`, { defaultValue: title });
+  // Normalize category name for lookup
+  const categoryType = title.toLowerCase().replace(/\s/g, "");
+
+  // Get category image or fallback
+  const categoryInfo = categoryImages[categoryType] || {};
+  const categoryImage = categoryInfo.image || "https://via.placeholder.com/150";
+
+  // Translate category title with a fallback
+  const categoryTitleTrans = t(`categoriesData.${categoryType}`, {
+    defaultValue: categoryInfo.name || title,
+  });
 
   return (
     <Link to={`/category?type=${categoryType}`} className={s.card} title={categoryTitleTrans}>
-      {/* Display image if available */}
-      {categoryImages[categoryType]?.image ? (
-        <img
-          src={categoryImages[categoryType].image}
-          alt={categoryTitleTrans}
-          className={s.iconImage}
-        />
-      ) : (
-        <span>No Image Available</span>
-      )}
+      <img src={categoryImage} alt={categoryTitleTrans} className={s.iconImage} />
       <span>{categoryTitleTrans}</span>
     </Link>
   );

@@ -1,16 +1,18 @@
 @use "src/Styles/mixins" as m;
 
-.sectionsMenu {
+.sectionsMenuButton {
   width: 250px;
   max-height: 404px;
   display: flex;
   flex-direction: column;
   padding-inline-end: 10px;
   overflow-y: auto;
+  text-transform:capitalize;
 }
 
+
 @include m.large {
-  .sectionsMenu {
+  .sectionsMenuButton {
     background-color: rgb(234, 234, 234);
     position: fixed;
     left: -250%;
@@ -32,17 +34,17 @@
 }
 
 @include m.very-small {
-  .sectionsMenu {
+  .sectionsMenuButton {
     width: 100%;
   }
 }
 
-.sectionsMenu::-webkit-scrollbar {
+.sectionsMenuButton::-webkit-scrollbar {
   background-color: transparent;
   width: 6px !important;
 }
 
-.sectionsMenu::-webkit-scrollbar-thumb {
+.sectionsMenuButton::-webkit-scrollbar-thumb {
   background-color: #f2f2f2;
   border-radius: 5px;
 
@@ -52,11 +54,11 @@
 }
 
 @include m.large {
-  .sectionsMenu::-webkit-scrollbar {
+  .sectionsMenuButton::-webkit-scrollbar {
     width: 8px !important;
   }
 
-  .sectionsMenu::-webkit-scrollbar-thumb {
+  .sectionsMenuButton::-webkit-scrollbar-thumb {
     background-color: #d0d0d0;
     border-radius: 5px;
 
@@ -66,7 +68,7 @@
   }
 }
 
-.sectionsMenu>* {
+.sectionsMenuButton>* {
   color: var(--black);
   cursor: pointer;
   padding: 5px;
@@ -100,7 +102,7 @@
   width: 100%;
 }
 
-.sectionsMenu>h2 {
+.sectionsMenuButton>h2 {
   font-weight: 500;
   font-size: 1rem;
   padding-top: 50px;

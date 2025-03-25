@@ -4,7 +4,7 @@ import { SCROLL_REQUIRED } from "src/Data/globalVariables";
 import { scrollToTopToolTipLeftPos } from "src/Functions/componentsFunctions";
 import { scrollToTop } from "src/Functions/helper";
 import useEventListener from "src/Hooks/Helper/useEventListener";
-import { FaSquareWhatsapp } from "react-icons/fa6";
+import { RiWhatsappFill } from "react-icons/ri";
 import { FaArrowUp } from "react-icons/fa";
 import s from "./ScrollToTop.module.scss";
 
@@ -35,7 +35,7 @@ const ScrollToTop = () => {
         className={`${s.whatsappButton} ${s.hide}`} // Apply the hide class
         aria-label="Chat on WhatsApp"
       >
-        <FaSquareWhatsapp />
+        <RiWhatsappFill />
       </a>
 
       {/* Scroll to Top Button */}

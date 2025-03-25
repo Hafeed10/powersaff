@@ -35,7 +35,6 @@ const Home = () => {
             <div className={s.line} />
             <MainSlider />
           </div>
-
           <TodaySection />
           <Addes />
           <CategoriesSection />

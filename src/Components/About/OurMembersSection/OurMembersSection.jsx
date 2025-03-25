@@ -18,7 +18,7 @@ const OurMembersSection = () => {
         <p className={s.description}>
           Powersaff, founded by Mr. Abdul Jabbar, has been in the industry for the past 5 years. 
           With over three decades of experience, our team has immense expertise in battery solutions. 
-          We started in Manjeri, Malappuram, and later expanded to umaramputhur pallikunnu, now housing state-of-the-art 
+          pallikunnu, now housing state-of-the-art 
           inverter manufacturing facilities. Our latest plant produces high-quality tubular and automotive 
           inverters. At Powersaff, we offer solar power solutions, including MPPT/PWM controllers, UPS systems, 
           and premium solar panels with grid inverters, making residential and commercial solar installations easier.

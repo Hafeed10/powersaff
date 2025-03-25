@@ -24,7 +24,6 @@
   img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
   }
 }
 
@@ -34,13 +33,12 @@
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 50px;
   max-width: 100%;
 
   img {
     max-width: 45%;
     height: auto;
-    border-radius: 8px;
 
     @include m.small {
       max-width: 100%;
@@ -61,7 +59,7 @@
   margin: 20px auto;
   border-radius: 4px;
   font-weight: 500;
-  transition: background 0.2s;
+  transition: background 0.2s ease-in-out;
 
   &:focus-visible {
     transition: var(--outline-transition);

@@ -6,6 +6,7 @@ import s from "./Footer.module.scss";
 import RepoStarsForks from "./RepoStarsForks/RepoStarsForks";
 import DownloadAppInfo from "./WebsiteSocialMedia/DownloadAppInfo";
 
+
 const Footer = () => {
   const { t } = useTranslation();
   const section = "footer.section";

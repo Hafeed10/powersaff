@@ -65,18 +65,8 @@ export const productsData = [
       image37,
 
     ],
-    colors: [
-      {
-        name: "ice blue",
-        color: "#dcdfea",
-      },
-      {
-        name: "black",
-        color: "#27292d",
-      },
-    ],
     rate: 5,
-    votes: 28,
+    votes:28,
     quantity: 1,
     sold: 105,
     id: 1,
@@ -101,16 +91,6 @@ export const productsData = [
       image1,
 
     ],
-    colors: [
-      {
-        name: "ice blue",
-        color: "#dcdfea",
-      },
-      {
-        name: "black",
-        color: "#27292d",
-      },
-    ],
     rate: 5,
     votes: 88,
     quantity: 1,
@@ -131,16 +111,6 @@ export const productsData = [
     otherImages: [
       image32,
 
-    ],
-    colors: [
-      {
-        name: "ice blue",
-        color: "#0e0e0f",
-      },
-      {
-        name: "black",
-        color: "#27292d",
-      },
     ],
     rate: 5,
     votes: 50,
@@ -165,12 +135,6 @@ export const productsData = [
     otherImages: [
       image2,
 
-    ],
-    colors: [
-      {
-        name: "black",
-        color: "#03040f",
-      },
     ],
     rate: 4,
     votes: 75,
@@ -199,12 +163,6 @@ export const productsData = [
       image3,
 
     ],
-    colors: [
-      {
-        name: "black",
-        color: "#151515",
-      },
-    ],
     rate: 5,
     quantity: 1,
     votes: 99,
@@ -230,24 +188,6 @@ export const productsData = [
       image4,
 
     ],
-    colors: [
-      {
-        name: "ice blue",
-        color: "#d3d7dc",
-      },
-      {
-        name: "gray",
-        color: "#858080",
-      },
-      {
-        name: "brown",
-        color: "#433636",
-      },
-      {
-        name: "custom",
-        color: "#b4a9a8",
-      },
-    ],
     rate: 4.5,
     votes: 99,
     quantity: 1,
@@ -270,16 +210,10 @@ export const productsData = [
     *SHORT CIRCUIT PROTECTION
     *TEMPERATURE CONTROLLED COOLING FAN`,
     addedDate: "2025/3/15",
-    img: image33,
+    img:image33,
     otherImages: [
       image33,
 
-    ],
-    colors: [
-      {
-        name: "black",
-        color: "#151515",
-      },
     ],
     rate: 5,
     quantity: 1,
@@ -303,20 +237,6 @@ export const productsData = [
     addedDate: "2024/3/7",
     img: image5,
     otherImages: [image5,],
-    colors: [
-      {
-        name: "pink",
-        color: "#d1dcdb",
-      },
-      {
-        name: "light pink",
-        color: "#e0d9d8",
-      },
-      {
-        name: "dark blue",
-        color: "#d0d4da",
-      },
-    ],
     rate: 5,
     votes: 65,
     quantity: 1,
@@ -339,20 +259,6 @@ export const productsData = [
     addedDate: "2022/9/15",
     img: image6,
     otherImages: [image6],
-    colors: [
-      {
-        name: "Tan",
-        color: "#ae9c89",
-      },
-      {
-        name: "light grayish",
-        color: "#c1bab1",
-      },
-      {
-        name: "brown",
-        color: "#987553",
-      },
-    ],
     rate: 3.5,
     votes: 159,
     quantity: 1,
@@ -364,7 +270,7 @@ export const productsData = [
     name: "Apple AirPods 4 | True Wireless | Bluetooth | White",
     category: "AirPods",
     price: 12900,
-    discount: 5,
+    discount:5,
     description: `
     Orientation Type: In Ear
     Connectivity: Bluetooth, Version 5.3
@@ -374,17 +280,6 @@ export const productsData = [
     addedDate: "2025/3/15",
     img: image35,
     otherImages: [image35],
-    colors: [
-      {
-        name: "white",
-        color: "#f8f3ee",
-      },
-      {
-        name: "black",
-        color: "#000000",
-      },
-
-    ],
     rate: 3.5,
     votes: 159,
     quantity: 1,
@@ -410,24 +305,6 @@ export const productsData = [
       image7,
 
     ],
-    colors: [
-      {
-        name: "ice blue",
-        color: "#d3d7dc",
-      },
-      {
-        name: "gray",
-        color: "#858080",
-      },
-      {
-        name: "brown",
-        color: "#433636",
-      },
-      {
-        name: "custom",
-        color: "#b4a9a8",
-      },
-    ],
     rate: 4.5,
     votes: 99,
     quantity: 1,
@@ -439,7 +316,7 @@ export const productsData = [
     name: "Lithium-ion Batteries",
     category: "Battery",
     price: 250,
-    discount: 0,
+    discount:0,
     description: `
     When the battery is providing power, the lithium ions move from the anode to the cathode, 
     creating a flow of electricity that provides power. When charging the battery, the ions 
@@ -447,19 +324,8 @@ export const productsData = [
     of ions is what makes the lithium-ion battery reusable and powerful. The following animation 
     depicts how a lithium-ion battery works is courtesy of the U.S. Department of Energy.`,
     addedDate: "2025/3/7",
-    img: image34,
+    img:image34,
     otherImages: [image34,],
-    colors: [
-      {
-        name: "blue",
-        color: "#116ce3",
-      },
-      {
-        name: "Dark blue",
-        color: "#070246",
-      },
-
-    ],
     rate: 5,
     votes: 75,
     quantity: 1,
@@ -482,16 +348,6 @@ export const productsData = [
     addedDate: "2023/12/22",
     img: image8,
     otherImages: [image8,],
-    colors: [
-      {
-        name: "tan",
-        color: "#5697c0",
-      },
-      {
-        name: "light yellow",
-        color: "#2920a7",
-      },
-    ],
     rate: 5,
     votes: 201,
     quantity: 1,
@@ -512,20 +368,6 @@ export const productsData = [
     addedDate: "2024/3/7",
     img: image9,
     otherImages: [image9,],
-    colors: [
-      {
-        name: "purple",
-        color: "#199323",
-      },
-      {
-        name: "yellow",
-        color: "#e75757",
-      },
-      {
-        name: "red",
-        color: "#ded3d3",
-      },
-    ],
     rate: 3,
     votes: 35,
     quantity: 1,
@@ -550,12 +392,6 @@ export const productsData = [
     otherImages: [
       image10,
     ],
-    colors: [
-      {
-        name: "black",
-        color: "#951319",
-      },
-    ],
     rate: 4,
     votes: 94,
     quantity: 1,
@@ -578,12 +414,6 @@ export const productsData = [
     img: image14,
     otherImages: [
       image14,
-    ],
-    colors: [
-      {
-        name: "black",
-        color: "#0c0c0c",
-      },
     ],
     rate: 4.5,
     votes: 1049,
@@ -609,12 +439,6 @@ export const productsData = [
     otherImages: [
       image11,
     ],
-    colors: [
-      {
-        name: "black",
-        color: "#951319",
-      },
-    ],
     rate: 4,
     votes: 94,
     quantity: 1,
@@ -636,20 +460,6 @@ export const productsData = [
     addedDate: "2024/3/7",
     img: image15,
     otherImages: [image15],
-    colors: [
-      {
-        name: "red",
-        color: "#83cf65",
-      },
-      {
-        name: "black",
-        color: "#4c0813",
-      },
-      {
-        name: "white",
-        color: "#dcdcdc",
-      },
-    ],
     rate: 3,
     votes: 22,
     quantity: 1,
@@ -670,16 +480,6 @@ export const productsData = [
     img: image12,
     otherImages: [
       image12,
-    ],
-    colors: [
-      {
-        name: "sky blue",
-        color: "#324fb5",
-      },
-      {
-        name: "dark blue",
-        color: "#172487",
-      },
     ],
     rate: 4,
     votes: 145,
@@ -704,12 +504,6 @@ export const productsData = [
     img: image13,
     otherImages: [
       image13
-    ],
-    colors: [
-      {
-        name: "gray",
-        color: "#aba5a5",
-      },
     ],
     rate: 5,
     votes: 64,
@@ -736,13 +530,6 @@ export const productsData = [
     otherImages: [
       image16,
     ],
-    colors: [
-      {
-        name: "blue gray",
-        color: "#4a5274",
-      },
-
-    ],
     rate: 4.5,
     votes: 55,
     quantity: 1,
@@ -768,12 +555,6 @@ export const productsData = [
       wiredKeyboardThum1,
       wiredKeyboardThum2,
       wiredKeyboardThum3,
-    ],
-    colors: [
-      {
-        name: "black",
-        color: "#03040f",
-      },
     ],
     rate: 4,
     votes: 75,
@@ -802,13 +583,7 @@ export const productsData = [
       image39,
       image40,
     ],
-    colors: [
-      {
-        name: "black",
-        color: "#03040f",
-      },
-    ],
-    rate: 4.6,
+    rate: 4.5,
     votes: 75,
     quantity: 1,
     sold: 210,
@@ -832,12 +607,6 @@ export const productsData = [
       usbGamepadThum1,
       usbGamepadThum2,
       usbGamepadThum3,
-    ],
-    colors: [
-      {
-        name: "black",
-        color: "#242424",
-      },
     ],
     rate: 5,
     votes: 64,
@@ -864,12 +633,6 @@ export const productsData = [
       gamingLaptopThum2,
       gamingLaptopThum3,
     ],
-    colors: [
-      {
-        name: "black",
-        color: "#0c0c0c",
-      },
-    ],
     rate: 4.5,
     votes: 1049,
     quantity: 1,
@@ -895,12 +658,6 @@ export const productsData = [
       gamingMonitorThum1,
       gamingMonitorThum2,
       gamingMonitorThum3,
-    ],
-    colors: [
-      {
-        name: "black",
-        color: "#151515",
-      },
     ],
     rate: 5,
     quantity: 1,

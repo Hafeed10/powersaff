@@ -52,7 +52,6 @@ const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
         <UserMenuIcon visibility={showUser} />
       </div>
 
-      {/* Customer Service Section */}
       <div className={s.customerService}>
         <span className={s.serviceTitle}>{customerService.title}</span>
         <span className={s.serviceNumber}>{customerService.subtitle}</span>

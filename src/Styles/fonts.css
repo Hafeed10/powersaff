@@ -1,7 +1,7 @@
-/* Poppins */
+/* Poppins Font */
 @font-face {
   font-family: "Poppins";
-  src: url("../Fonts/Poppins/Poppins-Light.ttf"), format("ttf");
+  src: url("/src/Fonts/Poppins/Poppins-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("../Fonts/Poppins/Poppins-Regular.ttf"), format("ttf");
+  src: url("/src/Fonts/Poppins/Poppins-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("../Fonts/Poppins/Poppins-Medium.ttf"), format("ttf");
+  src: url("/src/Fonts/Poppins/Poppins-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("../Fonts/Poppins/Poppins-SemiBold.ttf"), format("ttf");
+  src: url("/src/Fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -33,7 +33,7 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("../Fonts/Poppins/Poppins-Bold.ttf"), format("ttf");
+  src: url("/src/Fonts/Poppins/Poppins-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -41,92 +41,192 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("../Fonts/Poppins/Poppins-ExtraBold.ttf"), format("ttf");
+  src: url("/src/Fonts/Poppins/Poppins-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
+/* Root Variables */
+:root {
+  /* Container Sizes */
+  --container-width: 85%;
+  --container-mobile-width: 94%;
+  --page-margin: 60px 0 100px;
+  
+  /* UI Effects */
+  --button-active-scale: 0.991;
+  --outline-transition: outline 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-/* Inter */
-@font-face {
-  font-family: "Inter";
-  src: url("../Fonts/Inter/Inter-Light.ttf"), format("ttf");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+  /* Swiper Defaults */
+  --swiper-pagination-bullet-inactive-color: var(--very-light-gray);
+  --swiper-pagination-bullet-inactive-opacity: 0.6;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-color: var(--tomato);
+
+  /* Colors */
+  --black: #000;
+  --very-dark-gray2: #181818;
+  --very-dark-gray: #252525;
+  --tooltip-bg-color: #2d2d2d;
+  --primary: #363738;
+  --brown: #504242;
+  --dark-gray: #4C5355;
+  --light-gray: #7D8184;
+  --regular-light-gray: #999999;
+  --gray-blue: #848d97;
+  --light-blue: #A0BCE0;
+  --medium-light-gray: #cbcbcb;
+  --very-light-gray: #EDEDED;
+  --very-light-gray2: #f5f5f5;
+  --secondary-white: #FAFAFA;
+  --skeleton-color1: #f6f7f8;
+  --skeleton-color2: #edeef1;
+  --website-bg: #fdfdfd;
+  --white: #fff;
+  --dark-red: #A22F2F;
+  --dark-tomato: #B40404;
+  --tomato: #db4444;
+  --red: #ff0000;
+  --orange-degree2: #ff8d23;
+  --rose: #E07575;
+  --green: #078639;
+  --blue: #4493f8;
+  --turquoise: #4AC2E8;
+  --yellow: #fffb19;
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("../Fonts/Inter/Inter-Regular.ttf"), format("ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+/* Global Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("../Fonts/Inter/Inter-Medium.ttf"), format("ttf");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+/* Text Selection */
+::-moz-selection {
+  color: var(--black);
+  background-color: rgba(255, 255, 0, 0.8);
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("../Fonts/Inter/Inter-SemiBold.ttf"), format("ttf");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+::selection {
+  color: var(--black);
+  background-color: rgba(255, 255, 0, 0.8);
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("../Fonts/Inter/Inter-Bold.ttf"), format("ttf");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
 }
 
+/* Body Styles */
+body {
+  background-color: var(--website-bg);
+  font-family: "Poppins";
+}
 
-/* Rubik */
-@font-face {
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-thumb {
+  min-height: 120px;
+  border-radius: 4px;
+  background-color: #cbcbcb;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #c3c2c2;
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background-color: #afafaf;
+}
+
+/* Container */
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* Responsive Container */
+@media (max-width: 992px) {
+  .container {
+    width: var(--container-mobile-width);
+  }
+}
+
+/* General Element Styles */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+input, button {
+  outline: none;
+}
+
+button {
+  user-select: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Tooltip Styling */
+.toolTip {
+  position: absolute;
+  width: max-content;
+  height: 24px;
+  background-color: var(--tooltip-bg-color);
+  color: var(--white);
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 0.9rem;
+  user-select: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.1s ease;
+}
+
+*:hover + [data-is-tooltip=true],
+*:hover > [data-is-tooltip=true] {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Arabic Font Handling */
+[lang="ar"] * {
   font-family: "Rubik";
-  src: url("../Fonts/Rubik/Rubik-Light.ttf"), format("ttf");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
 }
 
-@font-face {
-  font-family: "Rubik";
-  src: url("../Fonts/Rubik/Rubik-Regular.ttf"), format("ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+[lang="ar"] :where(h2, b) {
+  letter-spacing: -1px !important;
 }
 
-@font-face {
-  font-family: "Rubik";
-  src: url("../Fonts/Rubik/Rubik-Medium.ttf"), format("ttf");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+[lang="ar"] p {
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
-@font-face {
-  font-family: "Rubik";
-  src: url("../Fonts/Rubik/Rubik-SemiBold.ttf"), format("ttf");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+[lang="ar"] .skip-content {
+  right: -150%;
 }
 
-@font-face {
-  font-family: "Rubik";
-  src: url("../Fonts/Rubik/Rubik-Bold.ttf"), format("ttf");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+[lang="ar"] .skip-content:focus {
+  right: 0;
 }

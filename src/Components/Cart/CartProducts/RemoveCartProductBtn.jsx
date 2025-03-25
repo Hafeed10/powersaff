@@ -31,25 +31,21 @@ const RemoveCartProductBtn = ({ productId }) => {
     updateToolTipPositions();
   }, [windowWidth, i18n.language]);
 
+  function removeProduct() {
+    dispatch(removeById({ key: "cartProducts", id: productId }));
+  }
+
   return (
     <button
       type="button"
       className={s.removeButton}
       aria-label="Remove product from cart"
-      onClick={() => removeProduct(dispatch, productId)}
+      onClick={removeProduct}
     >
-      <SvgIcon name="xMark"/>
-      <ToolTip
-        top={toolTipTopPos}
-        left={toolTipLeftPos}
-        content={t("tooltips.remove")}
-      />
+      <SvgIcon name="xMark" className={s.icon} />x
+      <ToolTip top={toolTipTopPos} left={toolTipLeftPos} content={t("tooltips.remove")} />
     </button>
   );
 };
 
 export default RemoveCartProductBtn;
-
-function removeProduct(dispatch, productId) {
-  dispatch(removeById({ key: "cartProducts", id: productId }));
-}
