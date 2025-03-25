@@ -13,7 +13,7 @@ const SectionsMenuButton = () => {
       className={s.sectionsMenuButton}
       aria-label="Toggle sections menu"
     >
-      <SvgIcon name="list" />
+      <SvgIcon name="list" /> 
     </button>
      
   );
