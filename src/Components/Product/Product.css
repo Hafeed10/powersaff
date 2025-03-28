@@ -29,16 +29,50 @@
 .barsection {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
 }
 
+/* Make the list horizontally scrollable on small screens */
 .barsection ul {
     display: flex;
-    gap: 20px;
-    margin-top: 10px;
-    padding: 0;
-    background: white;
+    gap: 15px;
+    list-style: none;
+    padding: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
 }
+
+/* Hide scrollbar for Webkit-based browsers (Chrome, Safari) */
+.barsection ul::-webkit-scrollbar {
+    display: none;
+}
+
+.barsection li {
+    display: inline-block;
+}
+
+/* Category Buttons */
+.barsection button {
+    background: none;
+    border: 2px solid #d4c1c1;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.barsection button:hover,
+.barsection button.active {
+    background: black;
+    color: white;
+}
+
 
 ul li {
     list-style: none;
@@ -131,15 +165,22 @@ ul li button.active {
         font-size: 40px;
     }
 
+    .barsection {
+        justify-content: flex-start;
+        padding: 0 10px;
+    }
+
     .barsection ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        flex-wrap: nowrap;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 10px; /* Add some space for better UX */
     }
 
     .image-box {
         width: 100%;
         max-width: 400px;
+        border-radius: 1px;
     }
 
     .introductionContainer {
@@ -156,10 +197,28 @@ ul li button.active {
     .image-box {
         width: 100%;
         max-width: 300px;
+        border-radius: 1px;
     }
 
     .introductionContainer {
 
         display: block;
     }
+    .images {
+       
+        padding: 0px;
+        border-radius:none;
+    }
+    .barsection {
+        justify-content: flex-start;
+        padding: 0 10px;
+    }
+
+    .barsection ul {
+        flex-wrap: nowrap;
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 10px; /* Add some space for better UX */
+    }
+    
 }
