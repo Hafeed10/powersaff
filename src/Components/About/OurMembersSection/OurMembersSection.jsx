@@ -16,8 +16,8 @@ const OurMembersSection = () => {
         <h2 className={s.title}>Abdul Jabbar Ak</h2>
         <h3>Founder & Chairman</h3>
         <p className={s.description}>
-          Powersaff, founded by Mr. Abdul Jabbar, has been in the industry for the past 5 years. 
-          With over three decades of experience, our team has immense expertise in battery solutions. 
+          Powersaff, founded by Mr. Abdul Jabbar, has been in the industry for the past 25 years. 
+          With over three decades of experience, our team has immense expertise in inveter solutions. 
           pallikunnu, now housing state-of-the-art 
           inverter manufacturing facilities. Our latest plant produces high-quality tubular and automotive 
           inverters. At Powersaff, we offer solar power solutions, including MPPT/PWM controllers, UPS systems, 
