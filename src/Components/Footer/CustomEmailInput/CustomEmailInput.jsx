@@ -80,28 +80,29 @@ const CustomEmailInput = () => {
 
   return (
     <form className={s.form} onSubmit={sendEmail}>
-      <input
-        type="email"
-        required
-        placeholder={t("inputsPlaceholders.enterYourEmail")}
-        value={email}
-        autoComplete="off"
-        onChange={(e) => setEmail(e.target.value)}
-        ref={emailRef}
-      />
+  <input
+    type="email"
+    required
+    placeholder={t("inputsPlaceholders.enterYourEmail")}
+    value={email}
+    autoComplete="off"
+    onChange={(e) => setEmail(e.target.value)}
+    ref={emailRef}
+  />
 
-      <button aria-label="Send mail" type="submit">
-        <div style={sendIconDirection}>
-          {!loading ? <SvgIcon name="vector" /> : <SpinnerLoading />}
-        </div>
+  <button aria-label="Send mail" type="submit">
+    <div style={sendIconDirection}>
+      {!loading ? <SvgIcon name="vector" /> : <SpinnerLoading />}
+    </div>
 
-        <ToolTip
-          top={sendIconToolTipTopPos}
-          left={toolTipLeftPosition}
-          content={toolTipTextNoun}
-        />
-      </button>
-    </form>
+    <ToolTip
+      top={sendIconToolTipTopPos}
+      left={toolTipLeftPosition}
+      content={toolTipTextNoun}
+    />
+  </button>
+</form>
+
   );
 };
 

@@ -10,12 +10,14 @@
 .wrapper {
   display: flex;
   flex-wrap: wrap;
+  // flex-direction: column;
   gap: 10px 10px;
 }
 
 @include m.large {
   .wrapper {
     gap: 20px;
+    flex-direction: column;
   }
 }
 

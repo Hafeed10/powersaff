@@ -4,7 +4,7 @@
   -webkit-tap-highlight-color: transparent;
   position: absolute;
   left: 20px;
-  top: 129px;
+  top: 123px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -35,7 +35,43 @@
   height: 25px;
 }
 
+@include m.large {
+  .profileSectionsButton {
+    display: block;
+  }
+}
+
+@include m.medium {
+  .profileSectionsButton {
+    top: 139px;
+  }
+}
+
+@include m.very-small {
+  .profileSectionsButton {
+    left: 10px;
+  }
+}
+
+.profileSectionsButton>svg {
+  width: 25px;
+  height: 25px;
+}
+
 // Arabic styles
 [lang=ar] .profileSectionsButton {
   top: 126px;
+}
+
+
+
+// Arabic styles
+[lang=ar] .profileSectionsButton {
+    top: 139px;
+}
+
+@include m.medium {
+  [lang=ar] .profileSectionsButton {
+    top: 139px;
+  }
 }

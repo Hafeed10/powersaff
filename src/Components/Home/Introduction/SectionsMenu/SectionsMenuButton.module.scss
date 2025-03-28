@@ -30,7 +30,7 @@
 
 @include m.medium {
   .sectionsMenuButton {
-    top: 129px;
+    top: 139px;
   }
 }
 
@@ -47,11 +47,11 @@
 
 // Arabic styles
 [lang=ar] .sectionsMenuButton {
-  top: 120px;
+    top: 139px;
 }
 
 @include m.medium {
   [lang=ar] .sectionsMenuButton {
-    top: 126px;
+    top: 139px;
   }
 }

@@ -16,7 +16,7 @@ const Header = () => {
           {/* <Link to="/"> */}
           <img src={powersaff_logo} alt="logo" />
           {/* </Link> */}
-        </h1>
+        </h1> 
         <div className={s.headerContent}>
           <Nav />
           <NavTools {...navToolsProps} />
