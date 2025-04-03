@@ -10,7 +10,7 @@ const CartProduct = ({ data }) => {
     return null;
   }
 
-  const { img, name, shortName, afterDiscount, quantity, id} = data;
+  const { img, name, shortName, afterDiscount, quantity, id } = data;
   const priceAfterDiscount = parseFloat(afterDiscount.replaceAll(",", "")) || 0;
   const subTotal = (quantity * priceAfterDiscount).toFixed(2);
   const { t } = useTranslation();
@@ -28,16 +28,22 @@ const CartProduct = ({ data }) => {
           <img src={img} alt={`${shortName} product`} />
           <RemoveCartProductBtn productId={id} />
         </div>
-         <Link to={`/details?product=${name}`}>{translatedProductName}</Link>
+        <Link to={`/details?product=${name}`}>{translatedProductName}</Link>
       </td>
 
-      <td className={s.price}>₹{afterDiscount}</td>
+      {/* <td className={s.price}>₹{afterDiscount}</td> */}
+      <div className={s.price}>
+        <span> ₹Whatsapp Contact Me</span>
+      </div>
 
       <td>
         <CustomNumberInput product={data} quantity={quantity} />
       </td>
 
-      <td>₹{subTotal}</td>
+      {/* <td>₹{subTotal}</td> */}
+      <div className={s.price}>
+        <span> ₹Whatsapp Contact Me</span>
+      </div>
     </tr>
   );
 };

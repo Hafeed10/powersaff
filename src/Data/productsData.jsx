@@ -50,8 +50,8 @@ export const productsData = [
     shortName: "Acer Wireless Mouse | White and Green",
     name: "Acer Wireless Mouse | White and Green",
     category: "Mouse",
-    price: 1499,
-    discount: 10,
+    contact: 'contact me',
+    discount: 0,
     description: `
     1600 DPI Sensor
     Fast Scroll Wireless Mouse

@@ -19,17 +19,26 @@ const CartInfoMenu = () => {
       <div className={s.content}>
         <div className={s.item}>
           <span>{t(`${cartInfo}.subTotal`)}:</span>
-          <span aria-label={`Subtotal ${subTotal}`}>₹{subTotal}</span>
+          {/* <span aria-label={`Subtotal ${subTotal}`}>₹{subTotal}</span> */}
+          <div className={s.price}>
+            <span> ₹Whatsapp Contact Me</span>
+          </div>
         </div>
 
         <div className={s.item}>
           <span>{t(`${cartInfo}.shipping`)}:</span>
-          <span aria-label={t(`${cartInfo}.free`)}>{t(`${cartInfo}.free`)}</span>
+          {/* <span aria-label={t(`${cartInfo}.free`)}>{t(`${cartInfo}.free`)}</span> */}
+          <div className={s.price}>
+            <span> ₹Whatsapp Contact Me</span>
+          </div>
         </div>
 
         <div className={s.item}>
           <span>{t(`${cartInfo}.total`)}:</span>
-          <span aria-label={`Total ${subTotal}`}>₹{subTotal}</span>
+          {/* <span aria-label={`Total ${subTotal}`}>₹{subTotal}</span> */}
+          <div className={s.price}>
+            <span> ₹Whatsapp Contact Me</span>
+          </div>
         </div>
       </div>
 

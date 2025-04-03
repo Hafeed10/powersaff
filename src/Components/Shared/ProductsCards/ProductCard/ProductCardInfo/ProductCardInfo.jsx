@@ -30,10 +30,10 @@ const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
   const translatedProductName =
     shortName && typeof translateProduct === "function"
       ? translateProduct({
-          productName: shortName,
-          translateMethod: t,
-          translateKey: "shortName",
-        }) || shortName
+        productName: shortName,
+        translateMethod: t,
+        translateKey: "shortName",
+      }) || shortName
       : shortName;
 
   console.log("Translated Product Name:", translatedProductName);
@@ -45,12 +45,10 @@ const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
           {translatedProductName}
         </a>
       </strong>
-
       <div className={s.price}>
-        ₹{afterDiscount}
-        {discount > 0 && <del className={s.afterDiscount}>₹{price}</del>}
+        <span> ₹Contact Me</span>
       </div>
-
+      
       <div className={s.rateContainer}>
         <RateStars rate={rate} />
         <span className={s.numOfVotes}>({votes})</span>
