@@ -30,8 +30,7 @@ const AccountPage = () => {
             <PagesHistory history={["/", t("nav.profile")]} />
 
             <p className={s.welcomeMessage}>
-              {t("common.welcome")}
-              {"! "}
+             
               <Link to="/profile">{loginInfo.username}</Link>
             </p>
           </div>

@@ -3,9 +3,10 @@
   margin-bottom: 20px;
   user-select: none;
 }
-
+.card{
+  background-color: rgb(210, 225, 211);
+}
 .imgHolder>img {
-  border-radius: inherit;
   width: 100%;
   height: 400px;
 }
