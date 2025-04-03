@@ -34,11 +34,6 @@ const categoryImages = {
     image: img1,
     name: "Headphones",
   },
-  gaming: {
-    id: 6,
-    image: img2,
-    name: "Gaming",
-  },
   battery: {
     id: 7,
     image: img3,

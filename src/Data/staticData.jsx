@@ -71,11 +71,6 @@ export const categoriesData = [
     id: 5,
   },
   {
-    iconName: "gamepad",
-    title: "Gaming",
-    id: 6,
-  },
-  {
     iconName: "battery",
     title: "Battery",
     id: 7,

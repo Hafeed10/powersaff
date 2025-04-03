@@ -75,8 +75,8 @@ export const productsData = [
     shortName: "AX_ON",
     name: "AX_ON",
     category: "Battery",
-    price: 12000,
-    discount: 10,
+    price: 30000,
+    discount:0,
     description: `
     Type: 3.6V Lithium AA battery with axial leads.
     Capacity: 2600mAh.
@@ -123,8 +123,8 @@ export const productsData = [
     shortName: "Red Inverter",
     name: "Red Inverter",
     category: "Inverter",
-    price: 11000,
-    discount: 10,
+    price: 10000,
+    discount: 0,
     description: `
      Red Rhino Inverter Generator 7.5kW: This generator provides a maximum power output 
      of 7.5kW, suitable for various applications from outdoor events to job sites. It 
@@ -147,8 +147,8 @@ export const productsData = [
     shortName: "Sayok Ax-On",
     name: "Sayok Ax-On",
     category: "Battery",
-    price: 14000,
-    discount: 10,
+    price:30000,
+    discount: 0,
     description: `
     Type: 3.6V Lithium AA battery with axial leads.
     Capacity: 2600mAh.
@@ -174,8 +174,8 @@ export const productsData = [
     shortName: "X-Tra Power",
     name: "X-Tra Power",
     category: "Battery",
-    price: 20000,
-    discount: 10,
+    price: 30000,
+    discount: 0,
     description: `
    High Capacity: With a capacity of 3,700 mAh, the X-tra battery offers approximately 
    twice the charge of standard batteries like Canon’s LP-E6, reducing the need for 
@@ -226,8 +226,8 @@ export const productsData = [
     shortName: "Sayok Inverter",
     name: "Sayok Inverter",
     category: "Inverter",
-    price: 13000,
-    discount: 10,
+    price: 10000,
+    discount: 0,
     description: `
     Sayok Inverter Generator 7.5kW: This generator provides a maximum power output 
     of 7.5kW, suitable for various applications from outdoor events to job sites. It 
@@ -248,8 +248,8 @@ export const productsData = [
     shortName: "Sayok Tubular",
     name: "Sayok Tubular",
     category: "Battery",
-    price: 2980,
-    discount: 10,
+    price:30000,
+    discount: 0,
     description: `
     Positive Plate Design: Constructed with high-pressure spines to ensure deep cycling capabilities and extended battery life.
     Negative Plate Design: Optimized for effective active material utilization, enhancing overall performance.
@@ -291,8 +291,8 @@ export const productsData = [
     shortName: "X-Tra Power",
     name: "X-Tra Power",
     category: "Battery",
-    price: 20000,
-    discount: 10,
+    price: 30000,
+    discount: 0,
     description: `
    High Capacity: With a capacity of 3,700 mAh, the X-tra battery offers approximately 
    twice the charge of standard batteries like Canon’s LP-E6, reducing the need for 
@@ -359,7 +359,7 @@ export const productsData = [
     shortName: "Delta Forze",
     name: "Delta Forze",
     category: "Battery",
-    price: 11000,
+    price: 30000,
     discount: 0,
     description: `
     High Capacity: Designed with 100Ah capacity cells, providing substantial energy storage in a compact 3U, 19-inch rack-mounted chassis.
@@ -379,7 +379,7 @@ export const productsData = [
     shortName: "Powersaff Inverter",
     name: "Powersaff Inverter",
     category: "Inverter",
-    price: 6499,
+    price: 10000,
     discount: 0,
     description: `
     Powersaff Inverter Inverter Generator 7.5kW: This generator provides a maximum power output 
@@ -426,7 +426,7 @@ export const productsData = [
     shortName: "Powersaff Inverter",
     name: "Powersaff Inverter",
     category: "Inverter",
-    price: 6499,
+    price: 10000,
     discount: 0,
     description: `
     Powersaff Inverter Inverter Generator 7.5kW: This generator provides a maximum power output 
@@ -450,7 +450,7 @@ export const productsData = [
     shortName: "Sayok CPU",
     name: "Sayok CPU",
     category: "Inverter",
-    price: 7000,
+    price: 10000,
     discount: 0,
     description: `
     Sayok CPU Inverter Inverter Generator 7.5kW: This generator provides a maximum power output 
@@ -618,7 +618,7 @@ export const productsData = [
     shortName: "FHD Laptop",
     name: "ASUS FHD Gaming Laptop",
     category: "computers",
-    price: 5500,
+    price: 50000,
     discount: 10,
     description: `
     Experience unparalleled gaming performance with the ASUS FHD Gaming Laptop. Powered by cutting-edge hardware and
@@ -643,8 +643,8 @@ export const productsData = [
     shortName: "LCD Monitor",
     name: "IPS LCD Gaming Monitor",
     category: "gaming",
-    price: 14000,
-    discount: 10,
+    price: 15000,
+    discount:3,
     description: `
     Immerse yourself in the world of gaming with the IPS LCD Gaming Monitor. Featuring
     stunning visuals and ultra-smooth gameplay, this monitor delivers an unparalleled
