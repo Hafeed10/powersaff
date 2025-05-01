@@ -19,29 +19,19 @@ const CartInfoMenu = () => {
       <div className={s.content}>
         <div className={s.item}>
           <span>{t(`${cartInfo}.subTotal`)}:</span>
-          {/* <span aria-label={`Subtotal ${subTotal}`}>₹{subTotal}</span> */}
-          <div className={s.price}>
-            <span> ₹Whatsapp Contact Me</span>
-          </div>
+          <span aria-label={`Subtotal ${subTotal}`}>₹{subTotal}</span>
         </div>
 
         <div className={s.item}>
           <span>{t(`${cartInfo}.shipping`)}:</span>
-          {/* <span aria-label={t(`${cartInfo}.free`)}>{t(`${cartInfo}.free`)}</span> */}
-          <div className={s.price}>
-            <span> ₹Whatsapp Contact Me</span>
-          </div>
+          <span aria-label={t(`${cartInfo}.free`)}>{t(`${cartInfo}.free`)}</span>
         </div>
 
         <div className={s.item}>
           <span>{t(`${cartInfo}.total`)}:</span>
-          {/* <span aria-label={`Total ${subTotal}`}>₹{subTotal}</span> */}
-          <div className={s.price}>
-            <span> ₹Whatsapp Contact Me</span>
-          </div>
+          <span aria-label={`Total ${subTotal}`}>₹{subTotal}</span>
         </div>
       </div>
-
       <button
         type="button"
         className={s.whatsappButton}
@@ -81,7 +71,7 @@ function handleWhatsAppShare(cartProducts, t) {
   message += `🔹 *${t("cartPage.cartInfoMenu.total")}:* ₹${getSubTotal(cartProducts)}`;
 
   const encodedMessage = encodeURIComponent(message);
-  const whatsappUrl = `https://wa.me/9446180100?text=${encodedMessage}`;
+  const whatsappUrl = `https://wa.me/7558847558?text=${encodedMessage}`;
 
   window.open(whatsappUrl, "_blank");
 }

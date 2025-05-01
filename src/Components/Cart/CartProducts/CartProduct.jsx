@@ -30,12 +30,7 @@ const CartProduct = ({ data }) => {
         </div>
         <Link to={`/details?product=${name}`}>{translatedProductName}</Link>
       </td>
-
-      {/* <td className={s.price}>₹{afterDiscount}</td> */}
-      <div className={s.price}>
-        <span> ₹Whatsapp Contact Me</span>
-      </div>
-
+      <td className={s.price}>₹{afterDiscount}</td>
       <td>
         <CustomNumberInput product={data} quantity={quantity} />
       </td>
