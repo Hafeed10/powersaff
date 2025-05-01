@@ -46,7 +46,7 @@ const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
         </a>
       </strong>
       <div className={s.price}>
-        <span> ₹Contact Me</span>
+        <span>₹</span>
       </div>
       
       <div className={s.rateContainer}>

@@ -29,7 +29,7 @@ const ScrollToTop = () => {
       {/* WhatsApp Button (Hidden by default, appears on scroll) */}
       <a
         ref={whatsappButtonRef}
-        href="https://wa.me/919446180100"
+        href="https://wa.me/7558847558"
         target="_blank"
         rel="noopener noreferrer"
         className={`${s.whatsappButton} ${s.hide}`} // Apply the hide class
