@@ -50,7 +50,7 @@ export const productsData = [
     shortName: "Acer Wireless Mouse | White and Green",
     name: "Acer Wireless Mouse | White and Green",
     category: "Mouse",
-    contact: 'contact me',
+    price: 100000,
     discount: 0,
     description: `
     1600 DPI Sensor

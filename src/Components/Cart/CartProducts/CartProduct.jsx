@@ -34,11 +34,7 @@ const CartProduct = ({ data }) => {
       <td>
         <CustomNumberInput product={data} quantity={quantity} />
       </td>
-
-      {/* <td>₹{subTotal}</td> */}
-      <div className={s.price}>
-        <span> ₹Whatsapp Contact Me</span>
-      </div>
+      <td>₹{subTotal}</td>
     </tr>
   );
 };
